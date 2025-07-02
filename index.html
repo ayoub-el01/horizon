@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizon</title>
+    <link rel="stylesheet" href="style index.css">
+</head>
+<body>
+    
+<!-- header -->
+    <header>
+        <div class="header-info-bar">
+            <span>📧 contact@horizons.com</span>
+            <span>📞 +33 1 23 45 67 89</span>
+            <span>📍 Av. Al Farabi, Dcheira El Jihadia 80000, Maroc</span>
+        </div>
+        <nav class="navbar">
+            <div class="navbar-left">
+              <a href="index.html" class="logo">Horizons</a>
+            </div>
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav_menu">
+                <li class="nav_item1">
+                    <a href="index.html" class="nav_link">Accueil</a>
+                </li>
+                <li class="nav_item1">
+                <a href="Laboratoire.html" class="nav_link">Laboratoire</a>
+                </li>
+                <li class="nav_item1">
+                    <a href="Etude et ingénierie.html" class="nav_link">Etude et ingénierie</a>
+                </li>
+                <li class="nav_item1">
+                    <a href="À propos.html" class="nav_link">À propos</a>
+                </li>
+                <li class="nav_item">
+                    <button class="botun" onclick="window.location.href='contact.html'">contactez-nous</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="slider-container">
+      <!-- Background slides -->
+      <div class="slide slide-1 active"></div>
+      <div class="slide slide-2"></div>
+      <div class="slide slide-3"></div>
+      <div class="slide slide-4"></div>
+
+      <!-- Water background effects -->
+      <div class="water-background">
+          <div class="water-orb"></div>
+          <div class="water-orb"></div>
+          <div class="water-orb"></div>
+      </div>
+
+      <!-- Water droplets -->
+      <div class="water-droplets">
+          <div class="droplet" style="left: 10%; top: 20%; animation-delay: 0s;"></div>
+          <div class="droplet" style="left: 20%; top: 60%; animation-delay: 1s;"></div>
+          <div class="droplet" style="left: 30%; top: 30%; animation-delay: 2s;"></div>
+          <div class="droplet" style="left: 70%; top: 50%; animation-delay: 3s;"></div>
+          <div class="droplet" style="left: 80%; top: 20%; animation-delay: 4s;"></div>
+          <div class="droplet" style="left: 90%; top: 70%; animation-delay: 5s;"></div>
+      </div>
+
+      <!-- Slider content -->
+      <div class="slider-content">
+          <!-- Content for Slide 1 -->
+          <div class="slide-content active">
+              <h1>Horizons</h1>
+              <h2>Bienvenue sur Horizons</h2>
+              <p>Des solutions innovantes et responsables pour vos projets d’ingénierie, d’environnement et d’énergie.</p>
+              <button class="cta-button" onclick="document.getElementById('nos-poles').scrollIntoView({ behavior: 'smooth' });">En savoir plus</button>
+          </div>
+
+          <!-- Content for Slide 2 -->
+          <div class="slide-content">
+              <h1>Laboratoire d’Excellence</h1>
+              <h2>Analyses Fiables & Innovantes</h2>
+              <p>Notre laboratoire réalise des analyses précises et rigoureuses de l’eau, garantissant la qualité, la sécurité et la conformité de vos projets grâce à des équipements de pointe et une équipe expérimentée.</p>
+              <button class="cta-button" onclick="window.location.href='Laboratoire.html'">En savoir plus</button>
+          </div>
+
+          <!-- Content for Slide 3 -->
+          <div class="slide-content">
+              <h1>Etude et ingénierie</h1>
+              <h2>Expertise et Solutions Sur-Mesure</h2>
+              <p>Nous concevons des solutions innovantes et personnalisées, alliant rigueur technique et respect de l’environnement, pour garantir la réussite de vos projets, de la conception à la réalisation.</p>
+              <button class="cta-button" onclick="window.location.href='Etude et ingénierie.html'">En savoir plus</button>
+          </div>
+
+          <!-- Content for Slide 4 -->
+          <div class="slide-content">
+              <h1>Contactez-nous</h1>
+              <h2>Un projet ? Une question ? Parlons-en !</h2>
+              <p>Nous sommes à votre écoute pour répondre à vos questions et vous accompagner dans la réalisation de vos projets.</p>
+              <button class="cta-button" onclick="window.location.href='contact.html'">Contactez-nous</button>
+          </div>
+      </div>
+
+      <!-- Navigation arrows -->
+      <div class="slider-nav nav-prev" onclick="previousSlide()">‹</div>
+      <div class="slider-nav nav-next" onclick="nextSlide()">›</div>
+
+      <!-- Dots indicator -->
+      <div class="slider-dots">
+          <div class="dot active" onclick="goToSlide(0)"></div>
+          <div class="dot" onclick="goToSlide(1)"></div>
+          <div class="dot" onclick="goToSlide(2)"></div>
+          <div class="dot" onclick="goToSlide(3)"></div>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="progress-bar">
+          <div class="progress-fill" style="width: 25%;"></div>
+      </div>
+  </div>
+
+
+  <script>
+
+
+// SLIDER  
+let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const slideContents = document.querySelectorAll('.slide-content');
+        const dots = document.querySelectorAll('.dot');
+        const progressFill = document.querySelector('.progress-fill');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            // Hide all slides and content
+            slides.forEach(slide => slide.classList.remove('active'));
+            slideContents.forEach(content => content.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // Show current slide and content
+            slides[index].classList.add('active');
+            slideContents[index].classList.add('active');
+            dots[index].classList.add('active');
+
+            // Update progress bar
+            const progress = ((index + 1) / totalSlides) * 100;
+            progressFill.style.width = progress + '%';
+        }
+
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+            showSlide(currentSlideIndex);
+        }
+
+        function previousSlide() {
+            currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlideIndex);
+        }
+
+        function goToSlide(index) {
+            currentSlideIndex = index;
+            showSlide(currentSlideIndex);
+        }
+
+        // Auto-play slider
+        setInterval(nextSlide, 5000);
+
+        // keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                previousSlide();
+            } else if (e.key === 'ArrowRight') {
+                nextSlide();
+            }
+        });
+
+// Hamburger menu toggle for mobile
+const toggle = document.querySelector('.navbar-toggle');
+const navMenu = document.querySelector('.nav_menu');
+if (toggle && navMenu) {
+    toggle.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+    });
+}
+// Back to Top button 
+const backToTopBtn = document.getElementById('backToTop');
+window.onscroll = function() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopBtn.classList.add("show");
+    } else {
+        backToTopBtn.classList.remove("show");
+    }
+};
+backToTopBtn.onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+  </script>
+
+
+<!-- NOS POLES -->
+<section class="features" id="nos-poles">
+  <h2>Nos Poles</h2>
+  <div class="features-grid">
+    <div class="feature-item">
+      <a href="#pole1">
+        <h3>Etude et ingénierie</h3>
+      </a>
+      <p>
+        Nous concevons des solutions sur-mesure, alliant expertise technique et innovation, pour garantir la réussite de vos projets dans le respect des normes et de l'environnement.
+      </p>
+    </div>
+    <div class="feature-item">
+        <a href="#pole2">
+        <h3>Laboratoire</h3>
+        </a>
+      <p id="pole1">
+        Notre laboratoire réalise des analyses précises et fiables, assurant la qualité et la sécurité de vos ouvrages grâce à des équipements de pointe et une équipe expérimentée.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- pole 1 -->
+<section class="hero-split">
+    <h2>Etude et ingénierie</h2>
+  <div class="hero-left">
+    <img src="1000115760.jpg" alt="" />
+  </div>
+  <div class="hero-right">
+    <div class="hero-block">
+      <h3>Hydraulique</h3>
+      <p>
+        Nous développons des solutions efficaces pour la gestion et l'optimisation des ressources en eau, adaptées à vos besoins et respectueuses de l'environnement.
+      </p>
+    </div>
+    <div class="hero-block">
+      <h3>Environnement</h3>
+      <p>
+        Nous vous accompagnons dans la préservation de l'environnement à travers des études et des actions concrètes pour un développement durable.
+      </p>
+    </div>
+    <div id="pole2" class="hero-block">
+      <h3>Gestion de projets</h3>
+      <p>
+        Nous assurons un pilotage rigoureux de vos projets, de la conception à la réalisation, pour garantir leur succès dans le respect des  délais et des exigences.
+      </p>
+    </div>
+  </div>
+</section>
+ 
+<!-- pole 2 -->
+<section class="hero-split-alt">
+    <h2>Analyses de l'eau</h2>
+  <div class="hero-left-alt">
+    <img src="1000115758.jpg" alt="" />
+  </div>
+  <div class="hero-right-alt">
+    <div class="hero-block">
+      <h3>eau potable</h3>
+      <p>
+        Nous analysons et contrôlons la qualité de l'eau potable pour garantir la sécurité et la santé des usagers.
+      </p>
+    </div>
+    <div class="hero-block">
+      <h3>eau usée</h3>
+      <p>
+        Nous assurons le suivi et le traitement des eaux usées afin de préserver l'environnement et respecter les normes en vigueur.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- footer-->
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>Horizons</h3>
+      <p>
+        Au service de l'innovation durable et de solutions respectueuses de l'environnement, pour un impact réel.
+      </p>
+    </div>
+
+    <div class="footer-links">
+            <h3>Lien</h3>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="Laboratoire.html">Laboratoire</a></li>
+              <li><a href="Etude et ingénierie.html">Etude et ingénierie</a></li>
+              <li><a href="À propos.html">À propos</a></li>
+            </ul>
+          </div>
+
+    <div class="footer-newsletter">
+          <h3>Contactez-nous</h3>
+          <div class="footer-contact-info">
+          <p><strong>Email:</strong> contact@horizons.com</p>
+          <p><strong>Téléphone:</strong> +33 1 23 45 67 89</p>
+          <p><strong>Adresse:</strong> Av. Al Farabi, Dcheira El Jihadia 80000, Maroc</p>
+        </div>
+    </div>
+      
+    <div class="footer-social">
+          <h3>Nos réseau sociaux</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook" class="social-icon">📘</a>
+            <a href="#" aria-label="Twitter" class="social-icon">🐦</a>
+            <a href="#" aria-label="Instagram" class="social-icon">📸</a>
+          </div>
+          </div>
+    </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Our Company. All rights reserved.</p>
+  </div>
+</footer>
+<button id="backToTop">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M12 5L12 19" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <path d="M5 12L12 5L19 12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+</button>
+
+</body>
+</html>
