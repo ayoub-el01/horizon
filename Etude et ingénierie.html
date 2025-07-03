@@ -48,55 +48,114 @@
 
 <!-- cards section -->
 <section class="big-cards-section">
-  <div class="big-cards-container">
-    <div class="big-card">
-      <img src="1000115750.jpg" alt="Laboratoire eaux" class="big-card-image" />
-      <a href="#service-technique-section"><h2>Laboratoire eaux</h2></a>
-      <p>Nous accompagnons les industries dans leur transition écologique avec des solutions innovantes, durables et adaptées à chaque secteur.</p>
+  <div class="carousel-wrapper">
+    <button class="carousel-arrow left" aria-label="Précédent">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div class="carousel-track" id="carousel-track">
+      <div class="carousel-card">
+        <img src="1000115750.jpg" alt="Traitement des Eaux et Dessalement" class="carousel-card-image" onclick="window.location.href='#service-technique-card1'"/>
+        <a href="#service-technique-card1"><h2>Traitement des Eaux et Dessalement</h2></a>
+        <p>Nous accompagnons les industries dans leur transition écologique avec des solutions innovantes, durables et adaptées à chaque secteur.</p>
+      </div>
+      <div class="carousel-card">
+        <img src="1000115761.jpg" alt="Structure et Charpente Métallique" class="carousel-card-image" onclick="window.location.href='#service-technique-card2'"/>
+        <a href="#service-technique-card2"><h2>Structure et Charpente Métallique</h2></a>
+        <p>Nous assurons l'ingénierie complète des structures en béton armé et charpente métallique.</p>
+      </div>
+      <div class="carousel-card">
+        <img src="1000115753.jpg" alt="Hydraulique et Hydrologie" class="carousel-card-image" onclick="window.location.href='#service-technique-card3'"/>
+        <a href="#service-technique-card3"><h2>Hydraulique et Hydrologie</h2></a>
+        <p>Nous assurons l'ingénierie complète des ouvrages hydrauliques urbaines et rurales : réseaux d'adduction, assainissement, drainage.</p>
+      </div>
+      <div class="carousel-card">
+        <img src="1000115758.jpg" alt="Environnement et Énergie" class="carousel-card-image" onclick="window.location.href='#service-technique-card4'"/>
+        <a href="#service-technique-card4"><h2>Environnement et Énergie</h2></a>
+        <p>Nous accompagnons les industries dans leur transition écologique avec des solutions innovantes, durables et adaptées à chaque secteur.</p>
+      </div>
+      <div class="carousel-card">
+        <img src="1000115760.jpg" alt="Géotechnique" class="carousel-card-image" onclick="window.location.href='#service-technique-card5'"/>
+        <a href="#service-technique-card5"><h2>Géotechnique</h2></a>
+        <p>Nous assurons l'ingénierie complète des ouvrages de traitement des eaux :</p>
+      </div>
     </div>
-    <div class="big-card">
-      <img src="1000115761.jpg" alt="Etude et ingénierie" class="big-card-image" />
-      <a href="#service-technique-section1"><h2>Etude et ingénierie</h2></a>
-      <p>Nous aidons les collectivités à bâtir des territoires plus verts, plus intelligents et plus responsables grâce à notre expertise environnementale.</p>
-    </div>
+    <button class="carousel-arrow right" aria-label="Suivant">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+    </button>
   </div>
 </section>
 
-<!-- contenu -->
-<section id="service-technique-section"  class="service-technique-section">
-    <div class="service-technique-card">
-      <h2>Traitement des Eaux et Dessalement</h2>
-      <p class="service-technique-subtitle">
-        Nous assurons l’ingénierie complète des ouvrages de traitement des eaux :
-      </p>
-      <ul class="service-technique-list">
-        <li><span class="water-icon"></span> Études préliminaires, APS, APD et DCE</li>
-        <li><span class="water-icon"></span> Dimensionnement des stations d’épuration (STEP), stations de traitement d’eau potable (STEA) et des stations de dessalement de l’eau de mer</li>
-        <li><span class="water-icon"></span> Plans de masse, PFD (Process Flow Diagram) ou schéma de flow de procédés, PID (Piping and Instrumentation Diagram) ou schéma de la tuyauterie et de l’instrumentation, implantation 3D</li>
-        <li><span class="water-icon"></span> Gestion de projet et assistance à la mise en service</li>
-      </ul>
-    </div>
-  </section>
+<script>
+(function() {
+  const track = document.getElementById('carousel-track');
+  const cards = track.querySelectorAll('.carousel-card');
+  const leftArrow = document.querySelector('.carousel-arrow.left');
+  const rightArrow = document.querySelector('.carousel-arrow.right');
+  let currentIndex = 0;
+
+  function getVisibleCount() {
+    if (window.innerWidth <= 600) return 1;
+    return 2;
+  }
+  function getCardWidth() {
+    const card = track.querySelector('.carousel-card');
+    if (!card) return 350;
+    const style = window.getComputedStyle(card);
+    return card.offsetWidth + parseInt(style.marginRight || 0) + parseInt(style.marginLeft || 0) + 32;
+  }
+  function updateCarousel() {
+    const visible = getVisibleCount();
+    const maxIndex = Math.max(0, cards.length - visible);
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+    if (currentIndex < 0) currentIndex = 0;
+    const cardWidth = getCardWidth();
+    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    leftArrow.disabled = currentIndex === 0;
+    rightArrow.disabled = currentIndex === maxIndex;
+  }
+  leftArrow.addEventListener('click', function() {
+    currentIndex--;
+    updateCarousel();
+  });
+  rightArrow.addEventListener('click', function() {
+    currentIndex++;
+    updateCarousel();
+  });
+  window.addEventListener('resize', updateCarousel);
+  updateCarousel();
+})();
+</script>
+
 
 
   <section id="service-technique-section1" class="service-technique-section">
-    <div class="service-technique-card">
+    <div class="service-technique-card" id="service-technique-card1">
+      <h2>Traitement des Eaux et Dessalement</h2>
+      <p class="service-technique-subtitle">
+        Nous assurons l'ingénierie complète des ouvrages de traitement des eaux :
+      </p>
+      <ul class="service-technique-list">
+        <li><span class="water-icon"  id="service-technique-card2"></span> Études préliminaires, APS, APD et DCE</li>
+        <li><span class="water-icon"></span> Dimensionnement des stations d'épuration (STEP), stations de traitement d'eau potable (STEA) et des stations de dessalement de l'eau de mer</li>
+        <li><span class="water-icon"></span> Plans de masse, PFD (Process Flow Diagram) ou schéma de flow de procédés, PID (Piping and Instrumentation Diagram) ou schéma de la tuyauterie et de l'instrumentation, implantation 3D</li>
+        <li><span class="water-icon""></span> Gestion de projet et assistance à la mise en service</li>
+      </ul>
       <h2>Structure et Charpente Métallique</h2>
       <ul class="service-technique-list">
-        <li><span class="water-icon"></span> Études de conception et calculs de structures en béton armé et charpente métallique</li>
-        <li><span class="water-icon"></span> Plans d’exécution, notes de calcul, modélisations</li>
+        <li><span class="water-icon" id="service-technique-card3"></span> Études de conception et calculs de structures en béton armé et charpente métallique</li>
+        <li><span class="water-icon"></span> Plans d'exécution, notes de calcul, modélisations</li>
         <li><span class="water-icon"></span> Diagnostic et réhabilitation des ouvrages existants</li>
       </ul>
       <h2>Hydraulique et Hydrologie</h2>
       <ul class="service-technique-list">
-        <li><span class="water-icon"></span> Études hydrauliques urbaines et rurales : réseaux d’adduction, assainissement, drainage.</li>
+        <li><span class="water-icon" id="service-technique-card4"></span> Études hydrauliques urbaines et rurales : réseaux d'adduction, assainissement, drainage.</li>
         <li><span class="water-icon"></span> Dimensionnement des ouvrages hydrauliques (canaux, bassins, barrages, seuils).</li>
         <li><span class="water-icon"></span> Études hydrologiques et modélisation des crues.</li>
       </ul>
       <h2>Environnement et Énergie</h2>
       <ul class="service-technique-list">
-        <li><span class="water-icon"></span> Études d’impact environnemental et notices hydrauliques</li>
-        <li><span class="water-icon"></span> Intégration des énergies renouvelables (solaire, éolien, récupération d’énergie)</li>
+        <li><span class="water-icon" id="service-technique-card5"></span> Études d'impact environnemental et notices hydrauliques</li>
+        <li><span class="water-icon"></span> Intégration des énergies renouvelables (solaire, éolien, récupération d'énergie)</li>
         <li><span class="water-icon"></span> Optimisation énergétique des systèmes de traitement et de pompage</li>
         <li><span class="water-icon"></span> Bilan carbone et accompagnement pour atteindre la neutralité carbone</li>
       </ul>
@@ -116,7 +175,7 @@
       <div class="footer-about">
         <h3>Horizons</h3>
         <p>
-          Au service de l’innovation durable et de solutions respectueuses de l’environnement, pour un impact réel.
+          Au service de l'innovation durable et de solutions respectueuses de l'environnement, pour un impact réel.
         </p>
       </div>
   
