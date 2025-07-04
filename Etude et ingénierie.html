@@ -45,91 +45,62 @@
   </nav>
 </header>
 
-
-<!-- cards section -->
-<section class="big-cards-section">
-  <div class="carousel-wrapper">
-    <button class="carousel-arrow left" aria-label="Précédent">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-    </button>
-    <div class="carousel-track" id="carousel-track">
-      <div class="carousel-card">
-        <img src="1000115750.jpg" alt="Traitement des Eaux et Dessalement" class="carousel-card-image" onclick="window.location.href='#service-technique-card1'"/>
-        <a href="#service-technique-card1"><h2>Traitement des Eaux et Dessalement</h2></a>
-        <p>Nous accompagnons les industries dans leur transition écologique avec des solutions innovantes, durables et adaptées à chaque secteur.</p>
-      </div>
-      <div class="carousel-card">
-        <img src="1000115761.jpg" alt="Structure et Charpente Métallique" class="carousel-card-image" onclick="window.location.href='#service-technique-card2'"/>
-        <a href="#service-technique-card2"><h2>Structure et Charpente Métallique</h2></a>
-        <p>Nous assurons l'ingénierie complète des structures en béton armé et charpente métallique.</p>
-      </div>
-      <div class="carousel-card">
-        <img src="1000115753.jpg" alt="Hydraulique et Hydrologie" class="carousel-card-image" onclick="window.location.href='#service-technique-card3'"/>
-        <a href="#service-technique-card3"><h2>Hydraulique et Hydrologie</h2></a>
-        <p>Nous assurons l'ingénierie complète des ouvrages hydrauliques urbaines et rurales : réseaux d'adduction, assainissement, drainage.</p>
-      </div>
-      <div class="carousel-card">
-        <img src="1000115758.jpg" alt="Environnement et Énergie" class="carousel-card-image" onclick="window.location.href='#service-technique-card4'"/>
-        <a href="#service-technique-card4"><h2>Environnement et Énergie</h2></a>
-        <p>Nous accompagnons les industries dans leur transition écologique avec des solutions innovantes, durables et adaptées à chaque secteur.</p>
-      </div>
-      <div class="carousel-card">
-        <img src="1000115760.jpg" alt="Géotechnique" class="carousel-card-image" onclick="window.location.href='#service-technique-card5'"/>
-        <a href="#service-technique-card5"><h2>Géotechnique</h2></a>
-        <p>Nous assurons l'ingénierie complète des ouvrages de traitement des eaux :</p>
+<!-- Nos services section -->
+<section class="services-section">
+  <div class="services-cards">
+    <div class="service-card">
+      <img src="1000115750.jpg" alt="Traitement des Eaux et Dessalement" class="service-img" onclick="window.location.href='#service-technique-card1'">
+      <div>
+        <a href="#service-technique-card1">
+        <h3>Traitement des Eaux et Dessalement</h3>
+        </a>
+        <p>Assurer une eau de qualité grâce à des procédés fiables et innovants.</p>
       </div>
     </div>
-    <button class="carousel-arrow right" aria-label="Suivant">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
-    </button>
+    <div class="service-card">
+      <img src="1000115751.jpg" alt="Structure et Charpente Métallique" class="service-img" onclick="window.location.href='#service-technique-card2'">
+      <div>
+        <a href="#service-technique-card2">
+        <h3>Structure et Charpente Métallique</h3>
+        </a>
+        <p>Des constructions robustes et durables grâce à des solutions métalliques sur mesure.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="1000115752.jpg" alt="Hydraulique et Hydrologie" class="service-img" onclick="window.location.href='#service-technique-card3'">
+      <div>
+        <a href="#service-technique-card3">
+        <h3>Hydraulique et Hydrologie</h3>
+        </a>
+        <p>Résoudre les problèmes hydrauliques et hydrologiques complexes.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="1000115753.jpg" alt="Environnement et Énergie" class="service-img" onclick="window.location.href='#service-technique-card4'">
+      <div>
+        <a href="#service-technique-card4">
+        <h3>Environnement et Énergie</h3>
+        </a>
+        <p>Optimiser les ressources naturelles et réduire les impacts sur l'environnement.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="1000115758.jpg" alt="Géotechnique" class="service-img" onclick="window.location.href='#service-technique-card5'">
+      <div  id="service-technique-card1">
+        <a href="#service-technique-card5">
+        <h3>Géotechnique</h3>
+        </a>
+        <p>Assurer la stabilité des sols et des ouvrages.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<script>
-(function() {
-  const track = document.getElementById('carousel-track');
-  const cards = track.querySelectorAll('.carousel-card');
-  const leftArrow = document.querySelector('.carousel-arrow.left');
-  const rightArrow = document.querySelector('.carousel-arrow.right');
-  let currentIndex = 0;
 
-  function getVisibleCount() {
-    if (window.innerWidth <= 600) return 1;
-    return 2;
-  }
-  function getCardWidth() {
-    const card = track.querySelector('.carousel-card');
-    if (!card) return 350;
-    const style = window.getComputedStyle(card);
-    return card.offsetWidth + parseInt(style.marginRight || 0) + parseInt(style.marginLeft || 0) + 32;
-  }
-  function updateCarousel() {
-    const visible = getVisibleCount();
-    const maxIndex = Math.max(0, cards.length - visible);
-    if (currentIndex > maxIndex) currentIndex = maxIndex;
-    if (currentIndex < 0) currentIndex = 0;
-    const cardWidth = getCardWidth();
-    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-    leftArrow.disabled = currentIndex === 0;
-    rightArrow.disabled = currentIndex === maxIndex;
-  }
-  leftArrow.addEventListener('click', function() {
-    currentIndex--;
-    updateCarousel();
-  });
-  rightArrow.addEventListener('click', function() {
-    currentIndex++;
-    updateCarousel();
-  });
-  window.addEventListener('resize', updateCarousel);
-  updateCarousel();
-})();
-</script>
-
-
+<!-- End Nos services section -->
 
   <section id="service-technique-section1" class="service-technique-section">
-    <div class="service-technique-card" id="service-technique-card1">
+    <div class="service-technique-card">
       <h2>Traitement des Eaux et Dessalement</h2>
       <p class="service-technique-subtitle">
         Nous assurons l'ingénierie complète des ouvrages de traitement des eaux :
