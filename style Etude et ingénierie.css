@@ -582,7 +582,7 @@ ul{
 }
 
 .services-section {
-  background: radial-gradient(ellipse at 60% 40%, #e3f6fd 60%, #b3e0ff 100%);
+  background: #e3f6fd;
   color: #0b3954;
   padding: 40px 0;
   margin-top: 120px;
