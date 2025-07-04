@@ -247,7 +247,7 @@ ul{
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 .big-cards-container {
   display: flex;
@@ -585,15 +585,10 @@ ul{
   background: #e3f6fd;
   color: #0b3954;
   padding: 40px 0;
-  margin-top: 120px;
+  margin-top: 280px;
+  margin-bottom: 180px;
 }
-.services-title {
-  color: #0b3954;
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-left: 20px;
-  margin-bottom: 32px;
-}
+
 .services-cards {
   display: flex;
   flex-wrap: wrap;
@@ -608,7 +603,7 @@ ul{
   display: flex;
   align-items: center;
   gap: 18px;
-  padding: 30px 20px;
+  padding: 34px 34px;
   min-width: 500px;
   max-width: 530px;
   width: 100%;
