@@ -86,7 +86,7 @@
     </div>
     <div class="service-card">
       <img src="1000115758.jpg" alt="Géotechnique" class="service-img" onclick="window.location.href='#service-technique-card5'">
-      <div  id="service-technique-card1">
+      <div">
         <a href="#service-technique-card5">
         <h3>Géotechnique</h3>
         </a>
@@ -101,36 +101,36 @@
 
   <section id="service-technique-section1" class="service-technique-section">
     <div class="service-technique-card">
-      <h2>Traitement des Eaux et Dessalement</h2>
+      <h2 id="service-technique-card1">Traitement des Eaux et Dessalement</h2>
       <p class="service-technique-subtitle">
         Nous assurons l'ingénierie complète des ouvrages de traitement des eaux :
       </p>
       <ul class="service-technique-list">
-        <li><span class="water-icon"  id="service-technique-card2"></span> Études préliminaires, APS, APD et DCE</li>
+        <li><span class="water-icon"></span> Études préliminaires, APS, APD et DCE</li>
         <li><span class="water-icon"></span> Dimensionnement des stations d'épuration (STEP), stations de traitement d'eau potable (STEA) et des stations de dessalement de l'eau de mer</li>
         <li><span class="water-icon"></span> Plans de masse, PFD (Process Flow Diagram) ou schéma de flow de procédés, PID (Piping and Instrumentation Diagram) ou schéma de la tuyauterie et de l'instrumentation, implantation 3D</li>
         <li><span class="water-icon""></span> Gestion de projet et assistance à la mise en service</li>
       </ul>
-      <h2>Structure et Charpente Métallique</h2>
+      <h2 id="service-technique-card2">Structure et Charpente Métallique</h2>
       <ul class="service-technique-list">
-        <li><span class="water-icon" id="service-technique-card3"></span> Études de conception et calculs de structures en béton armé et charpente métallique</li>
+        <li><span class="water-icon"></span> Études de conception et calculs de structures en béton armé et charpente métallique</li>
         <li><span class="water-icon"></span> Plans d'exécution, notes de calcul, modélisations</li>
         <li><span class="water-icon"></span> Diagnostic et réhabilitation des ouvrages existants</li>
       </ul>
-      <h2>Hydraulique et Hydrologie</h2>
+      <h2 id="service-technique-card3">Hydraulique et Hydrologie</h2>
       <ul class="service-technique-list">
-        <li><span class="water-icon" id="service-technique-card4"></span> Études hydrauliques urbaines et rurales : réseaux d'adduction, assainissement, drainage.</li>
+        <li><span class="water-icon"></span> Études hydrauliques urbaines et rurales : réseaux d'adduction, assainissement, drainage.</li>
         <li><span class="water-icon"></span> Dimensionnement des ouvrages hydrauliques (canaux, bassins, barrages, seuils).</li>
         <li><span class="water-icon"></span> Études hydrologiques et modélisation des crues.</li>
       </ul>
-      <h2>Environnement et Énergie</h2>
+      <h2 id="service-technique-card4">Environnement et Énergie</h2>
       <ul class="service-technique-list">
-        <li><span class="water-icon" id="service-technique-card5"></span> Études d'impact environnemental et notices hydrauliques</li>
+        <li><span class="water-icon"></span> Études d'impact environnemental et notices hydrauliques</li>
         <li><span class="water-icon"></span> Intégration des énergies renouvelables (solaire, éolien, récupération d'énergie)</li>
         <li><span class="water-icon"></span> Optimisation énergétique des systèmes de traitement et de pompage</li>
         <li><span class="water-icon"></span> Bilan carbone et accompagnement pour atteindre la neutralité carbone</li>
       </ul>
-      <h2>Géotechnique</h2>
+      <h2 id="service-technique-card5">Géotechnique</h2>
       <ul class="service-technique-list">
         <li><span class="water-icon"></span> Études de sol et reconnaissance géotechnique</li>
         <li><span class="water-icon"></span> Dimensionnement des fondations superficielles et profondes</li>
@@ -194,7 +194,6 @@
 
 
   <script>
-    // Hamburger menu toggle for mobile
     const toggle = document.querySelector('.navbar-toggle');
     const navMenu = document.querySelector('.nav_menu');
     if (toggle && navMenu) {
@@ -202,7 +201,6 @@
         navMenu.classList.toggle('open');
       });
     }
-    // Back to Top button functionality
     const backToTopBtn = document.getElementById('backToTop');
     window.onscroll = function() {
       if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
@@ -214,7 +212,6 @@
     backToTopBtn.onclick = function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     };
-    // Big card click effect
     document.querySelectorAll('.big-card').forEach(card => {
       card.addEventListener('mousedown', function() {
         this.classList.add('active');
@@ -230,6 +227,27 @@
       });
       card.addEventListener('touchend', function() {
         this.classList.remove('active');
+      });
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href').slice(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          e.preventDefault();
+          const headerOffset = 160;
+          const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+          const offsetPosition = elementPosition - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+          target.classList.add('highlight-effect');
+          setTimeout(() => {
+            target.classList.remove('highlight-effect');
+          }, 1500);
+        }
       });
     });
   </script>

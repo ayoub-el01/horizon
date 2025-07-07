@@ -247,7 +247,8 @@ ul{
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: 80px;
+  margin-top: 100px;
+  margin-bottom: 40px;
 }
 .big-cards-container {
   display: flex;
@@ -468,7 +469,7 @@ ul{
   padding: 48px 36px 36px 36px;
   width: 90%;
   max-width: none;
-  margin: 0 auto;
+  margin: 120px 0 80px 0;
   border: 1.5px solid #b3e0ff;
   transition: box-shadow 0.3s, border-color 0.3s;
 }
@@ -585,8 +586,8 @@ ul{
   background: #e3f6fd;
   color: #0b3954;
   padding: 40px 0;
-  margin-top: 280px;
-  margin-bottom: 180px;
+  margin-top: 300px;
+  margin-bottom: 200px;
 }
 
 .services-cards {
@@ -677,4 +678,15 @@ ul{
     margin-left: 0;
     text-align: center;
   }
+}
+
+.highlight-effect {
+  animation: scaleHighlightOnly 0.3s;
+}
+
+@keyframes scaleHighlightOnly {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(1.015); }
+  60%  { transform: scale(0.99); }
+  100% { transform: scale(1); }
 }
