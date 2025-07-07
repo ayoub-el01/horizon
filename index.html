@@ -123,82 +123,7 @@
   </div>
 
 
-  <script>
-
-
-// SLIDER  
-let currentSlideIndex = 0;
-        const slides = document.querySelectorAll('.slide');
-        const slideContents = document.querySelectorAll('.slide-content');
-        const dots = document.querySelectorAll('.dot');
-        const progressFill = document.querySelector('.progress-fill');
-        const totalSlides = slides.length;
-
-        function showSlide(index) {
-            // Hide all slides and content
-            slides.forEach(slide => slide.classList.remove('active'));
-            slideContents.forEach(content => content.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-
-            // Show current slide and content
-            slides[index].classList.add('active');
-            slideContents[index].classList.add('active');
-            dots[index].classList.add('active');
-
-            // Update progress bar
-            const progress = ((index + 1) / totalSlides) * 100;
-            progressFill.style.width = progress + '%';
-        }
-
-        function nextSlide() {
-            currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
-            showSlide(currentSlideIndex);
-        }
-
-        function previousSlide() {
-            currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
-            showSlide(currentSlideIndex);
-        }
-
-        function goToSlide(index) {
-            currentSlideIndex = index;
-            showSlide(currentSlideIndex);
-        }
-
-        // Auto-play slider
-        setInterval(nextSlide, 5000);
-
-        // keyboard navigation
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'ArrowLeft') {
-                previousSlide();
-            } else if (e.key === 'ArrowRight') {
-                nextSlide();
-            }
-        });
-
-// Hamburger menu toggle for mobile
-const toggle = document.querySelector('.navbar-toggle');
-const navMenu = document.querySelector('.nav_menu');
-if (toggle && navMenu) {
-    toggle.addEventListener('click', () => {
-        navMenu.classList.toggle('open');
-    });
-}
-// Back to Top button 
-const backToTopBtn = document.getElementById('backToTop');
-window.onscroll = function() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        backToTopBtn.classList.add("show");
-    } else {
-        backToTopBtn.classList.remove("show");
-    }
-};
-backToTopBtn.onclick = function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-};
-  </script>
-
+  
 
 <!-- NOS POLES -->
 <section class="features" id="nos-poles">
@@ -323,6 +248,89 @@ backToTopBtn.onclick = function() {
     <path d="M5 12L12 5L19 12" stroke="white" stroke-width="2" stroke-linecap="round"/>
   </svg>
 </button>
+
+<script>
+
+
+  // SLIDER  
+  let currentSlideIndex = 0;
+          const slides = document.querySelectorAll('.slide');
+          const slideContents = document.querySelectorAll('.slide-content');
+          const dots = document.querySelectorAll('.dot');
+          const progressFill = document.querySelector('.progress-fill');
+          const totalSlides = slides.length;
+  
+          function showSlide(index) {
+              // Hide all slides and content
+              slides.forEach(slide => slide.classList.remove('active'));
+              slideContents.forEach(content => content.classList.remove('active'));
+              dots.forEach(dot => dot.classList.remove('active'));
+  
+              // Show current slide and content
+              slides[index].classList.add('active');
+              slideContents[index].classList.add('active');
+              dots[index].classList.add('active');
+  
+              // Update progress bar
+              const progress = ((index + 1) / totalSlides) * 100;
+              progressFill.style.width = progress + '%';
+          }
+  
+          function nextSlide() {
+              currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+              showSlide(currentSlideIndex);
+          }
+  
+          function previousSlide() {
+              currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+              showSlide(currentSlideIndex);
+          }
+  
+          function goToSlide(index) {
+              currentSlideIndex = index;
+              showSlide(currentSlideIndex);
+          }
+  
+          // Auto-play slider
+         if (window.innerWidth <= 768) {
+              setInterval(nextSlide, 12000);
+          }
+          else{
+              setInterval(nextSlide, 9000);
+          }
+  
+          // keyboard navigation
+          document.addEventListener('keydown', function(e) {
+              if (e.key === 'ArrowLeft') {
+                  previousSlide();
+              } else if (e.key === 'ArrowRight') {
+                  nextSlide();
+              }
+          });
+  
+  // Hamburger menu toggle for mobile
+  const toggle = document.querySelector('.navbar-toggle');
+  const navMenu = document.querySelector('.nav_menu');
+  if (toggle && navMenu) {
+      toggle.addEventListener('click', () => {
+          navMenu.classList.toggle('open');
+      });
+  }
+  // Back to Top button 
+  const backToTopBtn = document.getElementById('backToTop');
+  window.onscroll = function() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+          backToTopBtn.classList.add("show");
+      } else {
+          backToTopBtn.classList.remove("show");
+      }
+  };
+  backToTopBtn.onclick = function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+    </script>
+  
+
 
 </body>
 </html>
