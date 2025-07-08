@@ -122,81 +122,75 @@
       </div>
   </div>
 
+      <!-- Services Section -->
+      <section class="services">
+          <div class="services-container">
+              <!-- Card 1 - Engineering Studies -->
+              <div class="service-card">
+                  <div class="card-image">
+                      <img src="1000115760.jpg" alt="Engineering Studies">
+                  </div>
+                  <div class="card-content">
+                      <div class="card-header">
+                          <div class="card-icon">🔬</div>
+                          <h3 class="card-title">Études & Ingénierie</h3>
+                      </div>
+                      <p class="card-description">
+                          Solutions d'ingénierie sur mesure pour la gestion et le traitement de l'eau. 
+                          De la conception à la mise en œuvre, nous accompagnons vos projets avec expertise.
+                      </p>
+                      <div class="card-features">
+                          <div class="feature">
+                              <span class="feature-icon">🧪</span>
+                              <span>Études de faisabilité détaillées</span>
+                          </div>
+                          <div class="feature">
+                              <span class="feature-icon">⚗️</span>
+                              <span>Conception de systèmes de traitement</span>
+                          </div>
+                          <div class="feature">
+                              <span class="feature-icon">👥</span>
+                              <span>Suivi et maintenance technique</span>
+                          </div>
+                      </div>
+                      <button class="card-btn">Consulter nos projets</button>
+                  </div>
+              </div>
 
-  
-
-<!-- NOS POLES -->
-<section class="features" id="nos-poles">
-  <h2>Nos Poles</h2>
-  <div class="features-grid">
-    <div class="feature-item">
-      <a href="#pole1">
-        <h3>Etude et ingénierie</h3>
-      </a>
-      <p>
-        Nous concevons des solutions sur-mesure, alliant expertise technique et innovation, pour garantir la réussite de vos projets dans le respect des normes et de l'environnement.
-      </p>
-    </div>
-    <div class="feature-item">
-        <a href="#pole2">
-        <h3>Laboratoire</h3>
-        </a>
-      <p id="pole1">
-        Notre laboratoire réalise des analyses précises et fiables, assurant la qualité et la sécurité de vos ouvrages grâce à des équipements de pointe et une équipe expérimentée.
-      </p>
-    </div>
+              <!-- Card 2 - Laboratory Analysis -->
+              <div class="service-card reverse">
+                  <div class="card-image">
+                      <img src="1000115758.jpg" alt="Laboratory Analysis">
+                  </div>
+                  <div class="card-content">
+                      <div class="card-header">
+                          <div class="card-icon">🔬</div>
+                          <h3 class="card-title">Analyses de Laboratoire</h3>
+                      </div>
+                      <p class="card-description">
+                          Nos analyses de pointe garantissent la qualité et la conformité de vos échantillons d'eau. 
+                          Équipements modernes et méthodes certifiées pour des résultats précis et fiables.
+                      </p>
+                      <div class="card-features">
+                          <div class="feature">
+                              <span class="feature-icon">🧪</span>
+                              <span>Analyses physico-chimiques complètes</span>
+                          </div>
+                          <div class="feature">
+                              <span class="feature-icon">⚗️</span>
+                              <span>Tests microbiologiques avancés</span>
+                          </div>
+                          <div class="feature">
+                              <span class="feature-icon">👥</span>
+                              <span>Équipe d'experts certifiés</span>
+                          </div>
+                      </div>
+                      <button class="card-btn">Découvrir nos services</button>
+                  </div>
+              </div>
+          </div>
+      </section>
   </div>
-</section>
-
-<!-- pole 1 -->
-<section class="hero-split">
-    <h2>Etude et ingénierie</h2>
-  <div class="hero-left">
-    <img src="1000115760.jpg" alt="" />
-  </div>
-  <div class="hero-right">
-    <div class="hero-block">
-      <h3>Hydraulique</h3>
-      <p>
-        Nous développons des solutions efficaces pour la gestion et l'optimisation des ressources en eau, adaptées à vos besoins et respectueuses de l'environnement.
-      </p>
-    </div>
-    <div class="hero-block">
-      <h3>Environnement</h3>
-      <p>
-        Nous vous accompagnons dans la préservation de l'environnement à travers des études et des actions concrètes pour un développement durable.
-      </p>
-    </div>
-    <div id="pole2" class="hero-block">
-      <h3>Gestion de projets</h3>
-      <p>
-        Nous assurons un pilotage rigoureux de vos projets, de la conception à la réalisation, pour garantir leur succès dans le respect des  délais et des exigences.
-      </p>
-    </div>
-  </div>
-</section>
- 
-<!-- pole 2 -->
-<section class="hero-split-alt">
-    <h2>Laboratoire</h2>
-  <div class="hero-left-alt">
-    <img src="1000115758.jpg" alt="" />
-  </div>
-  <div class="hero-right-alt">
-    <div class="hero-block">
-      <h3>Analyses Physico-Chimiques</h3>
-      <p>
-        Nous analysons les principaux paramètres de l’eau (pH, conductivité, ions, métaux, etc.) pour garantir sa qualité et sa conformité.
-      </p>
-    </div>
-    <div class="hero-block">
-      <h3>Analyses Microbiologiques</h3>
-      <p>
-        Nous contrôlons les principales bactéries et virus pour garantir la sécurité sanitaire de l’eau potable.
-      </p>
-    </div>
-  </div>
-</section>
 
 <!-- footer-->
 
@@ -250,6 +244,101 @@
 </button>
 
 <script>
+
+
+// Simple JavaScript for interactions
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for anchor links
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Button hover effects
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        button.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05)';
+        });
+        
+        button.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+    });
+
+    // Card hover animations
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+
+    // Hero slider functionality (basic implementation)
+    const leftArrow = document.querySelector('.nav-arrow-left');
+    const rightArrow = document.querySelector('.nav-arrow-right');
+    const indicators = document.querySelectorAll('.indicator');
+
+    // Since we only have one slide, we'll just add click handlers for future expansion
+    leftArrow.addEventListener('click', function() {
+        console.log('Previous slide');
+    });
+
+    rightArrow.addEventListener('click', function() {
+        console.log('Next slide');
+    });
+
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', function() {
+            indicators.forEach(ind => ind.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    // Add scroll-based animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Apply animation to service cards
+    serviceCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        observer.observe(card);
+    });
+
+    // Contact button functionality
+    const contactButtons = document.querySelectorAll('.contact-btn, .hero-btn, .card-btn');
+    contactButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Add your contact form logic here
+            alert('Contact functionality would be implemented here!');
+        });
+    });
+});
 
 
   // SLIDER  
@@ -328,6 +417,29 @@
   backToTopBtn.onclick = function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href').slice(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          e.preventDefault();
+          const headerOffset = 400;
+          const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+          const offsetPosition = elementPosition - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+          target.classList.add('highlight-effect');
+          setTimeout(() => {
+            target.classList.remove('highlight-effect');
+          }, 1500);
+        }
+      });
+    });
+
     </script>
   
 
