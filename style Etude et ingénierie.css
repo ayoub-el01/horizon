@@ -335,75 +335,89 @@ ul{
 
 
 
-
-.service-technique-section {
-  padding: 0;
+.analysis-section {
+  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  margin: 2.5rem 0 2.5rem 0;
+  padding: 0 1rem;
 }
 
-.service-technique-card {
-  background: #f6fbff;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(91, 192, 235, 0.13);
-  padding: 48px 36px 36px 36px;
-  width: 90%;
-  max-width: none;
-  margin: 120px 0 80px 0;
-  border: 1.5px solid #b3e0ff;
-  transition: box-shadow 0.3s, border-color 0.3s;
+.analysis-card {
+  width: 100%;
+  max-width: 1400px;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 6px 32px rgba(33, 150, 243, 0.08);
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin: 100px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: 1px solid #e3f6fd;
 }
 
-.service-technique-card h2 {
-  color: #2196f3;
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 12px;
+
+
+.analysis-card h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #2196f3 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.7rem;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 8px rgba(33, 150, 243, 0.08);
 }
 
-.service-technique-subtitle {
-  color: #0b3954;
-  font-size: 1.1rem;
-  margin-bottom: 28px;
+.analysis-desc {
+  color: #3b5b7a;
+  font-size: 1.18rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 4px rgba(91, 192, 235, 0.07);
 }
 
-.service-technique-list {
+.test-list {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.service-technique-list li {
   display: flex;
-  align-items: center;
-  font-size: 1.08rem;
-  color: #0b3954;
-  padding: 16px 0;
-  border-bottom: 1px solid #b3e0ff;
-  background: transparent;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
-.service-technique-list li:last-child {
-  border-bottom: none;
+.test-item {
+  padding: 1rem 1.5rem;
+  background: rgba(248, 250, 252, 0.8);
+  border: 1px solid rgba(241, 245, 249, 0.5);
+  border-radius: 0.75rem;
+  color: #374151;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-.big-card-image:hover {
-  cursor: pointer;
-} 
-
-.water-icon {
-  color: #0b3954; 
-  font-size: 1.3em;
-  margin-right: 12px;
+.test-item:hover {
+  background: rgba(239, 246, 255, 0.8);
+  border-color: rgba(219, 234, 254, 0.8);
+  transform: translateX(4px);
 }
 
-@media (min-width: 1200px) {
-  .service-technique-card {
-    padding-left: 80px;
-    padding-right: 80px;
+@media (max-width: 700px) {
+  .analysis-card {
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
   }
-} 
-  
+  .analysis-section {
+    margin: 1.2rem 0;
+  }
+  .analysis-card h2 {
+    font-size: 1.2rem;
+  }
+}
 
 
 
