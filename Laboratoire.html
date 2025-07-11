@@ -62,40 +62,35 @@
   </div>
 </section>
 
-<!-- contenu -->
-<section id="service-technique-section"  class="service-technique-section">
-    <div class="service-technique-card">
-      <h2>Analyses Physico-Chimiques</h2>
-      <p class="service-technique-subtitle">
-        Nous réalisons une large gamme de paramètres pour évaluer la composition de l’eau :
-      </p>
-      <ul class="service-technique-list">
-        <li><span class="water-icon"></span> Température, pH, conductivité, turbidité</li>
-        <li><span class="water-icon"></span> Dureté totale, calcium, magnésium, sodium, potassium</li>
-        <li><span class="water-icon"></span> Nitrates, nitrites, ammonium, chlorures, sulfates, phosphates</li>
-        <li><span class="water-icon"></span> Demande Chimique en Oxygène (DCO), Demande Biologique en Oxygène (DBO5)</li>
-        <li><span class="water-icon"></span> Métaux lourds (plomb, arsenic, mercure, etc.)</li>
-        <li><span class="water-icon"></span> Hydrocarbures, résidus chimiques, pesticides (sur demande)</li>
-      </ul>
-    </div>
-  </section>
+<section id="service-technique-section" class="analysis-section">
+  <div class="analysis-card">
+    <h2>Analyses Physico-Chimiques</h2>
+    <p class="analysis-desc">Évaluation complète de la composition chimique et des propriétés physiques de votre eau</p>
+    <ul class="test-list">
+      <li class="test-item">Température, pH, conductivité, turbidité</li>
+      <li class="test-item">Dureté totale, calcium, magnésium, sodium, potassium</li>
+      <li class="test-item">Nitrates, nitrites, ammonium, chlorures, sulfates, phosphates</li>
+      <li class="test-item">Demande Chimique en Oxygène (DCO), Demande Biologique en Oxygène (DBO5)</li>
+      <li class="test-item">Métaux lourds (plomb, arsenic, mercure, etc.)</li>
+      <li class="test-item">Hydrocarbures, résidus chimiques, pesticides (sur demande)</li>
+    </ul>
+  </div>
+</section>
 
+<section id="service-technique-section1" class="analysis-section">
+  <div class="analysis-card">
+    <h2>Analyses Microbiologiques</h2>
+    <p class="analysis-desc">Détection et identification des micro-organismes pour assurer la sécurité sanitaire</p>
+    <ul class="test-list">
+      <li class="test-item">Bactéries coliformes totales et fécales</li>
+      <li class="test-item">Escherichia coli (E. coli)</li>
+      <li class="test-item">Salmonelles</li>
+      <li class="test-item">Pseudomonas aeruginosa</li>
+      <li class="test-item">Levures et moisissures (si demandé)</li>
+    </ul>
+  </div>
+</section>
 
-  <section id="service-technique-section1" class="service-technique-section">
-    <div class="service-technique-card">
-      <h2>Analyses Microbiologiques</h2>
-      <p class="service-technique-subtitle">
-        Nous vérifions la présence de micro-organismes indicateurs d’une contamination biologique :
-      </p>
-      <ul class="service-technique-list">
-        <li><span class="water-icon"></span> Bactéries coliformes totales et fécales</li>
-        <li><span class="water-icon"></span> Escherichia coli (E. coli)</li>
-        <li><span class="water-icon"></span> Salmonelles</li>
-        <li><span class="water-icon"></span> Pseudomonas aeruginosa</li>
-        <li><span class="water-icon"></span> Levures et moisissures (si demandé)</li>
-      </ul>
-    </div>
-  </section>
 <!-- footer-->
 
 <footer class="footer">
@@ -143,7 +138,7 @@
 
 
     <div class="footer-bottom">
-      <p>© 2025 Horizons. All rights reserved.</p>
+      <p>© 2025 Horizons. Tous droits réservés.</p>
     </div>
   </footer>
 
@@ -214,7 +209,6 @@
       });
     });
 
-
     document.querySelectorAll("img[onclick^=\"window.location.href='#\"]").forEach(img => {
       img.addEventListener('click', function (e) {
         const href = this.getAttribute('onclick');
@@ -235,6 +229,7 @@
         }
       });
     });
+
 
   </script>
 
