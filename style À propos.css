@@ -299,7 +299,7 @@ ul {
 
 .title-accent {
   display: block;
-  background: linear-gradient(135deg, #059669, #0891b2, #3b82f6);
+  background: linear-gradient(90deg, #00bcd4, #0288d1, #01579b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -307,7 +307,7 @@ ul {
 
 .title-main {
   display: block;
-  background: linear-gradient(135deg, #1e40af, #1e3a8a);
+  background: linear-gradient(90deg, #00bcd4, #0288d1, #01579b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -317,7 +317,7 @@ ul {
 .hero-subtitle {
   font-size: 1.125rem;
   font-weight: 500;
-  color: #059669;
+  color: #00838F;
   margin-bottom: 2rem;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -355,9 +355,11 @@ ul {
 .section-title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2.5rem, 5vw, 3.5rem);
-  font-weight: 600;
-  color: #1e40af;
-  margin-bottom: 1rem;
+  font-weight: 1000;
+  background: linear-gradient(90deg, #00bcd4, #0288d1, #01579b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .section-subtitle {
@@ -425,7 +427,7 @@ ul {
   font-family: 'Playfair Display', serif;
   font-size: 1.75rem;
   font-weight: 600;
-  color: #1e40af;
+  color: #0288d1;
   margin: 1rem 0 1.5rem 0;
 }
 
@@ -460,7 +462,10 @@ ul {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   font-weight: 600;
-  color: #1e40af;
+  background: linear-gradient(90deg, #00bcd4, #0288d1, #01579b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
