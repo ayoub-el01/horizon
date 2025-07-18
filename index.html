@@ -14,8 +14,8 @@
     <header>
         <div class="header-info-bar">
             <span>📧 contact@horizons.com</span>
-            <span>📞 +33 1 23 45 67 89</span>
-            <span>📍 Av. Al Farabi, Tassila 80000</span>
+            <span>📞 +212 661 26 95 52</span>
+            <span>📍 ZONE INDUSTRIELLE TASSILA AGADIR</span>
         </div>
         <nav class="navbar">
             <div class="navbar-left">
@@ -74,9 +74,11 @@
         <div class="slider-content">
             <!-- Content for Slide 1 -->
             <div class="slide-content active">
-                <h1>Horizons</h1>
-                <h2>Bienvenue sur Horizons</h2>
-                <p>Des solutions innovantes et responsables pour vos projets d’ingénierie, d’environnement et d’énergie.
+                <h1>Bienvenue chez HORIZONS</h1>
+                <h2>Ingénierie – Environnement – Analyses des Eaux</h2>
+                <p>Chez HORIZONS, nous accompagnons industriels, collectivités et porteurs de projets dans la conception
+                    durable, le contrôle de la qualité des eaux, la gestion des projets environne-mentaux et l’opération
+                    des infrastructures de traitement des eaux.
                 </p>
                 <button class="cta-button" onclick="window.location.href='À propos.html'">En savoir plus</button>
             </div>
@@ -591,6 +593,17 @@
                 }
             });
         });
+
+        function updateNavMenuTop() {
+            const header = document.querySelector('header');
+            const navMenu = document.querySelector('.nav_menu');
+            if (header && navMenu) {
+                const headerHeight = header.offsetHeight;
+                navMenu.style.top = headerHeight + 'px';
+            }
+        }
+        window.addEventListener('DOMContentLoaded', updateNavMenuTop);
+        window.addEventListener('resize', updateNavMenuTop);
 
     </script>
 

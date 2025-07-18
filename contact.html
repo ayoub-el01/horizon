@@ -178,6 +178,19 @@
     backToTopBtn.onclick = function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     };
+
+    function updateNavMenuTop() {
+        const header = document.querySelector('header');
+        const navMenu = document.querySelector('.nav_menu');
+        if (header && navMenu) {
+          const headerHeight = header.offsetHeight;
+          navMenu.style.top = headerHeight + 'px';
+        }
+      }
+      window.addEventListener('DOMContentLoaded', updateNavMenuTop);
+      window.addEventListener('resize', updateNavMenuTop);
+
+      
   </script>
 
 </body>
