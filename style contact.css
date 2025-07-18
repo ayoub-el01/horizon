@@ -192,7 +192,7 @@ header {
   }
   .nav_menu {
     position: fixed;
-    top: 160px; /* Adjust to your header height if needed */
+    top: 158px; /* Adjust to your header height if needed */
     left: 0;
     width: 100vw;
     max-height: 0;
@@ -218,7 +218,6 @@ header {
   .nav_menu.open {
     max-height: 400px; /* or whatever your full menu height is */
     opacity: 1;
-    padding-top: 24px;
     pointer-events: auto;
   }
   .nav_menu .close-btn {
@@ -265,13 +264,7 @@ header {
     outline: none;
     border: none;
   }
-  .nav_menu .nav_link:focus {
-    background: #b3e0ff;
-  }
-  .nav_menu .nav_link:hover {
-    background: #b3e0ff;
-    color: #0b3954;
-  }
+
   .nav_menu .botun {
     display: block;
     width: 100vw;
