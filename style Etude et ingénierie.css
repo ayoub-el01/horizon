@@ -22,7 +22,7 @@ body {
 
 .header-info-bar {
   width: 100%;
-  background: linear-gradient(90deg, #cbe6f5 0%, #a2d5f2 10%, #5bc0eb 100%);
+  background: linear-gradient(90deg, #a2d5f2 0%, #a2d5f2 10%, #5bc0eb 100%);
   color: #0b3954;
   font-size: 1rem;
   display: flex;
@@ -126,7 +126,7 @@ a[href^="#service-technique-card"]:focus {
 
 header {
   position: fixed;
-  background: linear-gradient(90deg, #cbe6f5 0%, #a2d5f2 10%, #5bc0eb 100%);
+  background: linear-gradient(90deg, #a2d5f2 0%, #a2d5f2 10%, #5bc0eb 100%);
   width: 100%;
   top: 0;
   left: 0;
@@ -389,19 +389,25 @@ ul{
 }
 
 @media (max-width: 768px) {
-  .big-cards-container {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-  }
   .big-card {
-    width: 90%;
+    width: 95vw;
     max-width: 400px;
+    min-width: 0;
+    padding: 24px 8px;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .big-card h2, .big-card p {
+    text-align: center;
+    width: 100%;
   }
   .big-card-image {
-    width: 100%;
-    height: auto;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
   }
 }
 

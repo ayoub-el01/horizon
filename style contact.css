@@ -13,7 +13,7 @@ body {
 
 .header-info-bar {
   width: 100%;
-  background: linear-gradient(90deg, #cbe6f5 0%, #a2d5f2 10%, #5bc0eb 100%);
+  background: linear-gradient(90deg, #a2d5f2 0%, #a2d5f2 10%, #5bc0eb 100%);
   color: #0b3954;
   font-size: 1rem;
   display: flex;
@@ -99,7 +99,7 @@ a {
 
 header {
   position: fixed;
-  background: linear-gradient(90deg, #cbe6f5 0%, #a2d5f2 10%, #5bc0eb 100%);
+  background: linear-gradient(90deg, #a2d5f2 0%, #a2d5f2 10%, #5bc0eb 100%);
   width: 100%;
   top: 0;
   left: 0;
