@@ -730,3 +730,27 @@ ul{
   margin: auto;
 }
 
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 70px; 
+  padding-left: 24px; 
+  text-decoration: none;
+}
+
+.logo-img {
+  position: absolute;
+  height: 100px;      
+  width: auto;       
+  max-width: 160px;  
+  display: block;
+  margin: 0 16px 0 0; 
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+
+.logo-img:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
