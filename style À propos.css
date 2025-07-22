@@ -22,16 +22,14 @@ body {
 
 .header-info-bar {
   width: 100%;
-  background: linear-gradient(90deg, #e3f6fd 0%, #a2d5f2 60%, #5bc0eb 100%);
   color: #0b3954;
-  font-size: 1rem;
+  background: linear-gradient(90deg, #cbe6f5 0%, #a2d5f2 10%, #5bc0eb 100%);
+  font-size: 1rem; 
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 32px;
   padding: 10px 14px;
-  border-bottom: 2px solid #5bc0eb;
-  border-top: 2px solid #b3e0ff;
   font-family: 'Poppins', Arial, sans-serif;
   letter-spacing: 0.01em;
   z-index: 1100;
@@ -68,7 +66,7 @@ body {
   border-radius: 2em;
   padding: 12px 36px;
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 700; 
   box-shadow: 0 2px 12px rgba(33, 150, 243, 0.10), 0 1.5px 6px #a2d5f2;
   cursor: pointer;
   transition: 
@@ -113,7 +111,7 @@ a {
 
 header {
   position: fixed;
-  background-color: #5bc0eb;
+  background: linear-gradient(90deg, #cbe6f5 0%, #a2d5f2 10%, #5bc0eb 100%);
   width: 100%;
   top: 0;
   left: 0;

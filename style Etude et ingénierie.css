@@ -22,7 +22,7 @@ body {
 
 .header-info-bar {
   width: 100%;
-  background: linear-gradient(90deg, #e3f6fd 0%, #a2d5f2 60%, #5bc0eb 100%);
+  background: linear-gradient(90deg, #cbe6f5 0%, #a2d5f2 10%, #5bc0eb 100%);
   color: #0b3954;
   font-size: 1rem;
   display: flex;
@@ -30,8 +30,6 @@ body {
   justify-content: center;
   gap: 32px;
   padding: 10px 14px;
-  border-bottom: 2px solid #5bc0eb;
-  border-top: 2px solid #b3e0ff;
   font-family: 'Poppins', Arial, sans-serif;
   letter-spacing: 0.01em;
   z-index: 1100;
@@ -128,7 +126,7 @@ a[href^="#service-technique-card"]:focus {
 
 header {
   position: fixed;
-  background-color: #5bc0eb;
+  background: linear-gradient(90deg, #cbe6f5 0%, #a2d5f2 10%, #5bc0eb 100%);
   width: 100%;
   top: 0;
   left: 0;
