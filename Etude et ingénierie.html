@@ -53,8 +53,7 @@
   <section class="services-section">
     <div class="services-cards">
       <div class="service-card">
-        <img src="1000115750.jpg" alt="Traitement des Eaux et Dessalement" class="service-img"
-          onclick="window.location.href='#service-technique-card1'">
+        <img src="1000115750.jpg" alt="Traitement des Eaux et Dessalement" class="service-img">
         <div>
           <a href="#service-technique-card1">
             <h3>Traitement des Eaux et Dessalement</h3>
@@ -63,8 +62,7 @@
         </div>
       </div>
       <div class="service-card">
-        <img src="1000115751.jpg" alt="Structure et Charpente Métallique" class="service-img"
-          onclick="window.location.href='#service-technique-card2'">
+        <img src="1000115751.jpg" alt="Structure et Charpente Métallique" class="service-img">
         <div>
           <a href="#service-technique-card2">
             <h3>Structure et Charpente Métallique</h3>
@@ -73,8 +71,7 @@
         </div>
       </div>
       <div class="service-card">
-        <img src="1000115752.jpg" alt="Hydraulique et Hydrologie" class="service-img"
-          onclick="window.location.href='#service-technique-card3'">
+        <img src="1000115752.jpg" alt="Hydraulique et Hydrologie" class="service-img">
         <div>
           <a href="#service-technique-card3">
             <h3>Hydraulique et Hydrologie</h3>
@@ -83,8 +80,7 @@
         </div>
       </div>
       <div class="service-card">
-        <img src="1000115753.jpg" alt="Environnement et Énergie" class="service-img"
-          onclick="window.location.href='#service-technique-card4'">
+        <img src="1000115753.jpg" alt="Environnement et Énergie" class="service-img">
         <div>
           <a href="#service-technique-card4">
             <h3>Environnement et Énergie</h3>
@@ -93,15 +89,14 @@
         </div>
       </div>
       <div class="service-card">
-        <img src="1000115758.jpg" alt="Géotechnique" class="service-img"
-          onclick="window.location.href='#service-technique-card5'">
-        <div">
+        <img src="1000115758.jpg" alt="Géotechnique" class="service-img">
+        <div>
           <a href="#service-technique-card5">
             <h3>Géotechnique</h3>
           </a>
           <p>Assurer la stabilité des sols et des ouvrages.</p>
+        </div>
       </div>
-    </div>
     </div>
   </section>
 
@@ -304,13 +299,11 @@
       });
     });
 
-    // Add smooth scroll for images with onclick to anchor
-    document.querySelectorAll("img[onclick^=\"window.location.href='#\"]").forEach(img => {
+    document.querySelectorAll('.service-card .service-img').forEach(img => {
       img.addEventListener('click', function (e) {
-        const href = this.getAttribute('onclick');
-        const match = href && href.match(/window.location.href='#([^']+)'/);
-        if (match && match[1]) {
-          const targetId = match[1];
+        const link = this.nextElementSibling?.querySelector('a[href^="#"]');
+        if (link) {
+          const targetId = link.getAttribute('href').slice(1);
           const target = document.getElementById(targetId);
           if (target) {
             e.preventDefault();

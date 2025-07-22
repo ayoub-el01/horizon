@@ -54,17 +54,15 @@
   <section class="big-cards-section">
     <div class="big-cards-container">
       <div class="big-card">
-        <img src="1000115753.jpg" alt="Analyses Physico-Chimiques" class="big-card-image"
-          onclick="window.location.href='#service-technique-section'" />
         <a href="#service-technique-section">
+          <img src="1000115753.jpg" alt="Analyses Physico-Chimiques" class="big-card-image" />
           <h2>Analyses Physico-Chimiques</h2>
         </a>
         <p>Nous réalisons une large gamme de paramètres pour évaluer la composition de l’eau</p>
       </div>
       <div class="big-card">
-        <img src="1000115752.jpg" alt="Analyses Microbiologiques" class="big-card-image"
-          onclick="window.location.href='#service-technique-section1'" />
         <a href="#service-technique-section1">
+          <img src="1000115752.jpg" alt="Analyses Microbiologiques" class="big-card-image" />
           <h2>Analyses Microbiologiques</h2>
         </a>
         <p>Nous aidons les collectivités à bâtir des territoires plus verts, plus intelligents et plus responsables
@@ -234,26 +232,7 @@
       });
     });
 
-    document.querySelectorAll("img[onclick^=\"window.location.href='#\"]").forEach(img => {
-      img.addEventListener('click', function (e) {
-        const href = this.getAttribute('onclick');
-        const match = href && href.match(/window.location.href='#([^']+)'/);
-        if (match && match[1]) {
-          const targetId = match[1];
-          const target = document.getElementById(targetId);
-          if (target) {
-            e.preventDefault();
-            const headerOffset = 100;
-            const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
-            const offsetPosition = elementPosition - headerOffset;
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: 'smooth'
-            });
-          }
-        }
-      });
-    });
+
 
     function updateNavMenuTop() {
         const header = document.querySelector('header');
