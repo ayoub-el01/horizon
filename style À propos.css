@@ -111,7 +111,7 @@ a {
 
 header {
   position: fixed;
-  background: linear-gradient(90deg, #a2d5f2 0%, #a2d5f2 10%, #5bc0eb 100%);
+  background: linear-gradient(90deg, #e0f7fa 0%, #b3e5fc 50%, #81d4fa 100%);
   width: 100%;
   top: 0;
   left: 0;
@@ -149,15 +149,45 @@ header {
   color: #fff;
   font-size: 1.08rem;
   font-weight: 500;
-  padding: 6px 12px;
-  border-radius: 5px;
-  transition: background 0.2s, color 0.2s;
+  padding: 10px 26px;
+  border-radius: 999px;
+  position: relative;
+  background: none;
+  box-shadow: none;
+  border: 2px solid transparent;
+  margin: 0 2px;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.22s, box-shadow 0.22s, border-color 0.22s;
 }
 
-.nav_link:hover {
-  background: #b3e0ff;
-  color: #0b3954;
+.nav_link::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #e3f6fd 0%, #b3e0ff 100%);
+  border-radius: 999px;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.7);
+  transition: opacity 0.28s cubic-bezier(.4,0,.2,1), transform 0.32s cubic-bezier(.4,0,.2,1);
+  z-index: -1;
 }
+
+.nav_link:hover, .nav_link:focus {
+  color: #0b3954;
+  box-shadow: 0 8px 32px 0 rgba(33,150,243,0.18);
+  border-color: #5bc0eb;
+}
+
+.nav_link:hover::before, .nav_link:focus::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
 
 .navbar-toggle {
   display: none;
@@ -193,7 +223,7 @@ header {
 
 
 
-@media (max-width: 900px) {
+@media (max-width: 1400px) {
   .navbar {
     flex-wrap: wrap;
     padding: 12px 4%;
@@ -1094,4 +1124,37 @@ ul{
 
 .logo-img:hover {
   transform: scale(1.05) rotate(-2deg);
+}
+
+@media (max-width: 1400px) {
+  .navbar {
+    padding: 10px 4%;
+    min-height: 56px;
+  }
+  .logo {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+  }
+  .logo-img {
+    position: static;
+    max-height: 65px;
+    max-width: 120px;
+    width: auto;
+    height: auto;
+    margin: 0 8px 0 0;
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .navbar-left .logo {
+    justify-content: center;
+    width: 100%;
+  }
 }
