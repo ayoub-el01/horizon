@@ -61,15 +61,17 @@ a {
   text-decoration: none;
 }
 
+
 header {
   position: fixed;
-  background: linear-gradient(90deg, #e0f7fa 0%, #b3e5fc 50%, #81d4fa 100%);
+  background: hsla(213, 100%, 94%, 0.3);
+  backdrop-filter: blur(12px) saturate(160%);
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
-  box-shadow: 0 2px 12px rgba(33, 150, 243, 0.08);
-  transition: box-shadow 0.3s;
+  box-shadow: 0 2px 16px rgba(33, 150, 243, 0.10);
+  transition: box-shadow 0.3s, background 0.3s;
 }
 
 .navbar {
@@ -83,7 +85,7 @@ header {
 .navbar-left .logo {
   font-size: 1.7rem;
   font-weight: 700;
-  color: #fff;
+  color: #2196f3;
   letter-spacing: 1px;
   display: flex;
   align-items: center;
@@ -98,7 +100,7 @@ header {
 }
 
 .nav_link {
-  color: #fff;
+  color: #1976d2;
   font-size: 1.08rem;
   font-weight: 500;
   padding: 10px 26px;
@@ -129,14 +131,9 @@ header {
 }
 
 .nav_link:hover, .nav_link:focus {
-  color: #0b3954;
-  box-shadow: 0 8px 32px 0 rgba(33,150,243,0.18);
+  color: #00bcd4;
+  box-shadow: 0 8px 32px 0 rgba(33,150,243,0.10);
   border-color: #5bc0eb;
-}
-
-.nav_link:hover::before, .nav_link:focus::before {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
 }
 
 
@@ -186,7 +183,7 @@ header {
     left: 0;
     width: 100vw;
     max-height: 0;
-    background: #e3f6fd;
+    background: hsl(213, 100%, 94%);
     border-bottom-left-radius: 18px;
     border-bottom-right-radius: 18px;
     box-shadow: 0 8px 32px rgba(33, 150, 243, 0.18), 0 2px 8px #b3e0ff;
