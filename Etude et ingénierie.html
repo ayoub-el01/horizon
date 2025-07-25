@@ -26,19 +26,19 @@
       </button>
       <ul class="nav_menu">
         <li class="nav_item1">
-          <a href="index.html" class="nav_link">Accueil</a>
+          <a href="index.html" class="nav_link" id="nav-home">Accueil</a>
         </li>
         <li class="nav_item1">
-          <a href="Laboratoire.html" class="nav_link">Laboratoire</a>
+          <a href="Laboratoire.html" class="nav_link" id="nav-lab">Laboratoire</a>
         </li>
         <li class="nav_item1">
-          <a href="Etude et ingénierie.html" class="nav_link">Etude et ingénierie</a>
+          <a href="Etude et ingénierie.html" class="nav_link" id="nav-engineering">Etude et ingénierie</a>
         </li>
         <li class="nav_item1">
-          <a href="À propos.html" class="nav_link">À propos</a>
+          <a href="À propos.html" class="nav_link" id="nav-about">À propos</a>
         </li>
         <li class="nav_item">
-          <button class="botun" onclick="window.location.href='contact.html'">contactez-nous</button>
+          <button class="botun" onclick="window.location.href='contact.html'" id="nav-contact">contactez-nous</button>
         </li>
       </ul>
     </nav>
@@ -51,45 +51,45 @@
         <img src="1000115750.jpg" alt="Traitement des Eaux et Dessalement" class="service-img">
         <div>
           <a href="#service-technique-card1">
-            <h3>Traitement des Eaux et Dessalement</h3>
+            <h3 id="service1-title">Traitement des Eaux et Dessalement</h3>
           </a>
-          <p>Assurer une eau de qualité grâce à des procédés fiables et innovants.</p>
+          <p id="service1-desc">Assurer une eau de qualité grâce à des procédés fiables et innovants.</p>
         </div>
       </div>
       <div class="service-card">
         <img src="1000115751.jpg" alt="Structure et Charpente Métallique" class="service-img">
         <div>
           <a href="#service-technique-card2">
-            <h3>Structure et Charpente Métallique</h3>
+            <h3 id="service2-title">Structure et Charpente Métallique</h3>
           </a>
-          <p>Des constructions robustes et durables grâce à des solutions métalliques sur mesure.</p>
+          <p id="service2-desc">Des constructions robustes et durables grâce à des solutions métalliques sur mesure.</p>
         </div>
       </div>
       <div class="service-card">
         <img src="1000115752.jpg" alt="Hydraulique et Hydrologie" class="service-img">
         <div>
           <a href="#service-technique-card3">
-            <h3>Hydraulique et Hydrologie</h3>
+            <h3 id="service3-title">Hydraulique et Hydrologie</h3>
           </a>
-          <p>Résoudre les problèmes hydrauliques et hydrologiques complexes.</p>
+          <p id="service3-desc">Résoudre les problèmes hydrauliques et hydrologiques complexes.</p>
         </div>
       </div>
       <div class="service-card">
         <img src="1000115753.jpg" alt="Environnement et Énergie" class="service-img">
         <div>
           <a href="#service-technique-card4">
-            <h3>Environnement et Énergie</h3>
+            <h3 id="service4-title">Environnement et Énergie</h3>
           </a>
-          <p>Optimiser les ressources naturelles et réduire les impacts sur l'environnement.</p>
+          <p id="service4-desc">Optimiser les ressources naturelles et réduire les impacts sur l'environnement.</p>
         </div>
       </div>
       <div class="service-card">
         <img src="1000115758.jpg" alt="Géotechnique" class="service-img">
         <div>
           <a href="#service-technique-card5">
-            <h3>Géotechnique</h3>
+            <h3 id="service5-title">Géotechnique</h3>
           </a>
-          <p>Assurer la stabilité des sols et des ouvrages.</p>
+          <p id="service5-desc">Assurer la stabilité des sols et des ouvrages.</p>
         </div>
       </div>
     </div>
@@ -100,14 +100,16 @@
   <section id="service-technique-section" class="analysis-section">
     <div class="analysis-card">
       <h2 id="service-technique-card1">Traitement des Eaux et Dessalement</h2>
-      <p class="analysis-desc">Assurer une eau de qualité grâce à des procédés fiables et innovants</p>
+      <p class="analysis-desc" id="analysis1-desc">Assurer une eau de qualité grâce à des procédés fiables et innovants
+      </p>
       <ul class="test-list">
-        <li class="test-item"> Études préliminaires, APS, APD et DCE</li>
-        <li class="test-item"> Dimensionnement des stations d'épuration (STEP), stations de traitement d'eau potable
-          (STEA) et des stations de dessalement de l'eau de mer</li>
-        <li class="test-item"> Plans de masse, PFD (Process Flow Diagram) ou schéma de flow de procédés, PID (Piping and
-          Instrumentation Diagram) ou schéma de la tuyauterie et de l'instrumentation, implantation 3D</li>
-        <li class="test-item"> Gestion de projet et assistance à la mise en service</li>
+        <li class="test-item" id="analysis1-li1">Études préliminaires, APS, APD et DCE</li>
+        <li class="test-item" id="analysis1-li2">Dimensionnement des stations d'épuration (STEP), stations de traitement
+          d'eau potable (STEA) et des stations de dessalement de l'eau de mer</li>
+        <li class="test-item" id="analysis1-li3">Plans de masse, PFD (Process Flow Diagram) ou schéma de flow de
+          procédés, PID (Piping and Instrumentation Diagram) ou schéma de la tuyauterie et de l'instrumentation,
+          implantation 3D</li>
+        <li class="test-item" id="analysis1-li4">Gestion de projet et assistance à la mise en service</li>
       </ul>
     </div>
   </section>
@@ -116,11 +118,13 @@
   <section id="service-technique-section1" class="analysis-section">
     <div class="analysis-card">
       <h2 id="service-technique-card2">Structure et Charpente Métallique</h2>
-      <p class="analysis-desc">Des constructions robustes et durables grâce à des solutions métalliques sur mesure</p>
+      <p class="analysis-desc" id="analysis2-desc">Des constructions robustes et durables grâce à des solutions
+        métalliques sur mesure</p>
       <ul class="test-list">
-        <li class="test-item"> Études de conception et calculs de structures en béton armé et charpente métallique</li>
-        <li class="test-item"> Plans d'exécution, notes de calcul, modélisations</li>
-        <li class="test-item"> Diagnostic et réhabilitation des ouvrages existants</li>
+        <li class="test-item" id="analysis2-li1">Études de conception et calculs de structures en béton armé et
+          charpente métallique</li>
+        <li class="test-item" id="analysis2-li2">Plans d'exécution, notes de calcul, modélisations</li>
+        <li class="test-item" id="analysis2-li3">Diagnostic et réhabilitation des ouvrages existants</li>
       </ul>
     </div>
   </section>
@@ -129,12 +133,13 @@
   <section id="service-technique-section" class="analysis-section">
     <div class="analysis-card">
       <h2 id="service-technique-card3">Hydraulique et Hydrologie</h2>
-      <p class="analysis-desc">Résoudre les problèmes hydrauliques et hydrologiques complexes</p>
+      <p class="analysis-desc" id="analysis3-desc">Résoudre les problèmes hydrauliques et hydrologiques complexes</p>
       <ul class="test-list">
-        <li class="test-item"> Études hydrauliques urbaines et rurales : réseaux d'adduction, assainissement, drainage.
-        </li>
-        <li class="test-item"> Dimensionnement des ouvrages hydrauliques (canaux, bassins, barrages, seuils).</li>
-        <li class="test-item"> Études hydrologiques et modélisation des crues.</li>
+        <li class="test-item" id="analysis3-li1">Études hydrauliques urbaines et rurales : réseaux d'adduction,
+          assainissement, drainage.</li>
+        <li class="test-item" id="analysis3-li2">Dimensionnement des ouvrages hydrauliques (canaux, bassins, barrages,
+          seuils).</li>
+        <li class="test-item" id="analysis3-li3">Études hydrologiques et modélisation des crues.</li>
       </ul>
     </div>
   </section>
@@ -143,12 +148,15 @@
   <section id="service-technique-section1" class="analysis-section">
     <div class="analysis-card">
       <h2 id="service-technique-card4">Environnement et Énergie</h2>
-      <p class="analysis-desc">Optimiser les ressources naturelles et réduire les impacts sur l'environnement</p>
+      <p class="analysis-desc" id="analysis4-desc">Optimiser les ressources naturelles et réduire les impacts sur
+        l'environnement</p>
       <ul class="test-list">
-        <li class="test-item"> Études d'impact environnemental et notices hydrauliques</li>
-        <li class="test-item"> Intégration des énergies renouvelables (solaire, éolien, récupération d'énergie)</li>
-        <li class="test-item"> Optimisation énergétique des systèmes de traitement et de pompage</li>
-        <li class="test-item"> Bilan carbone et accompagnement pour atteindre la neutralité carbone</li>
+        <li class="test-item" id="analysis4-li1">Études d'impact environnemental et notices hydrauliques</li>
+        <li class="test-item" id="analysis4-li2">Intégration des énergies renouvelables (solaire, éolien, récupération
+          d'énergie)</li>
+        <li class="test-item" id="analysis4-li3">Optimisation énergétique des systèmes de traitement et de pompage</li>
+        <li class="test-item" id="analysis4-li4">Bilan carbone et accompagnement pour atteindre la neutralité carbone
+        </li>
       </ul>
     </div>
   </section>
@@ -157,12 +165,12 @@
   <section id="service-technique-section1" class="analysis-section">
     <div class="analysis-card">
       <h2 id="service-technique-card5">Géotechnique</h2>
-      <p class="analysis-desc">Assurer la stabilité des sols et des ouvrages</p>
+      <p class="analysis-desc" id="analysis5-desc">Assurer la stabilité des sols et des ouvrages</p>
       <ul class="test-list">
-        <li class="test-item"> Études de sol et reconnaissance géotechnique</li>
-        <li class="test-item"> Dimensionnement des fondations superficielles et profondes</li>
-        <li class="test-item"> Stabilité des talus, soutènements, risques de liquéfaction</li>
-        <li class="test-item"> Suivi géotechnique de chantier et assistance technique</li>
+        <li class="test-item" id="analysis5-li1">Études de sol et reconnaissance géotechnique</li>
+        <li class="test-item" id="analysis5-li2">Dimensionnement des fondations superficielles et profondes</li>
+        <li class="test-item" id="analysis5-li3">Stabilité des talus, soutènements, risques de liquéfaction</li>
+        <li class="test-item" id="analysis5-li4">Suivi géotechnique de chantier et assistance technique</li>
       </ul>
     </div>
   </section>
@@ -174,10 +182,9 @@
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-about">
-        <h3>Horizons</h3>
-        <p>
-          Au service de l’innovation durable et de solutions respectueuses de l’environnement, pour un impact réel.
-        </p>
+        <h3 id="footer-about-title">Horizons</h3>
+        <p id="footer-about-text">Au service de l’innovation durable et de solutions respectueuses de l’environnement,
+          pour un impact réel.</p>
         <div class="footer-social">
           <div class="social-icons">
             <a href="#" aria-label="Facebook" class="social-icon">
@@ -197,26 +204,27 @@
       </div>
 
       <div class="footer-links">
-        <h3>Lien</h3>
+        <h3 id="footer-links-title">Lien</h3>
         <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="Laboratoire.html">Laboratoire</a></li>
-          <li><a href="Etude et ingénierie.html">Etude et ingénierie</a></li>
-          <li><a href="À propos.html">À propos</a></li>
+          <li><a href="index.html" id="footer-home">Accueil</a></li>
+          <li><a href="Laboratoire.html" id="footer-lab">Laboratoire</a></li>
+          <li><a href="Etude et ingénierie.html" id="footer-engineering">Etude et ingénierie</a></li>
+          <li><a href="À propos.html" id="footer-about">À propos</a></li>
         </ul>
       </div>
 
       <div class="footer-newsletter">
-        <h3>Contactez-nous</h3>
+        <h3 id="footer-contact-title">Contactez-nous</h3>
         <div class="footer-contact-info">
-          <p><strong>Email:</strong> contact@horizons.com</p>
-          <p><strong>Téléphone:</strong> +212 661 26 95 52</p>
-          <p><strong>Adresse:</strong> ZONE INDUSTRIELLE TASSILA AGADIR</p>
+          <p><strong>Email:</strong> <span id="footer-email">contact@horizons.com</span></p>
+          <p><strong id="footer-phone-label">Téléphone:</strong> <span id="footer-phone">+212 661 26 95 52</span></p>
+          <p><strong id="footer-address-label">Adresse:</strong> <span id="footer-address">ZONE INDUSTRIELLE TASSILA
+              AGADIR</span></p>
         </div>
       </div>
 
       <div class="footer-social">
-        <h3>Notre localisation</h3>
+        <h3 id="footer-location-title">Notre localisation</h3>
         <div class="footer-map" style="width:100%;height:180px;max-width:300px;">
           <iframe src="https://www.google.com/maps?q=Av.+Al+Farabi,+Dcheira+El+Jihadia+80000&output=embed" width="100%"
             height="180" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"
@@ -225,7 +233,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Horizons. Tous droits réservés.</p>
+      <p id="footer-copyright">© 2025 Horizons. Tous droits réservés.</p>
     </div>
   </footer>
 
@@ -236,6 +244,25 @@
       <path d="M5 12L12 5L19 12" stroke="white" stroke-width="2" stroke-linecap="round" />
     </svg>
   </button>
+  <!-- Floating Language Switcher -->
+  <div id="lang-switcher-container">
+    <button id="lang-switch-floating" class="lang-switch-fab" title="Switch language" aria-haspopup="listbox"
+      aria-expanded="false" tabindex="0">
+      <span id="lang-switch-flag" class="lang-switch-flag"></span>
+    </button>
+    <div id="lang-switch-dropdown" class="lang-switch-dropdown" role="listbox" tabindex="-1">
+      <button class="lang-switch-option" id="lang-switch-option-en" data-lang="en" tabindex="0">
+        <span class="lang-switch-flag"></span>
+        <span class="lang-switch-label">EN</span>
+        <span class="lang-switch-check" style="display:none;">✔</span>
+      </button>
+      <button class="lang-switch-option" id="lang-switch-option-fr" data-lang="fr" tabindex="0">
+        <span class="lang-switch-flag"></span>
+        <span class="lang-switch-label">FR</span>
+        <span class="lang-switch-check" style="display:none;">✔</span>
+      </button>
+    </div>
+  </div>
 
 
   <script>
@@ -245,7 +272,7 @@
     if (toggle && navMenu) {
       toggle.addEventListener('click', () => {
         navMenu.classList.toggle('open');
-        toggle.classList.toggle('open'); // Add this for hamburger-to-X
+        toggle.classList.toggle('open');
       });
     }
     const backToTopBtn = document.getElementById('backToTop');
@@ -315,17 +342,289 @@
     });
 
     function updateNavMenuTop() {
-        const header = document.querySelector('header');
-        const navMenu = document.querySelector('.nav_menu');
-        if (header && navMenu) {
-          const headerHeight = header.offsetHeight;
-          navMenu.style.top = headerHeight + 'px';
-        }
+      const header = document.querySelector('header');
+      const navMenu = document.querySelector('.nav_menu');
+      if (header && navMenu) {
+        const headerHeight = header.offsetHeight;
+        navMenu.style.top = headerHeight + 'px';
       }
-      window.addEventListener('DOMContentLoaded', updateNavMenuTop);
-      window.addEventListener('resize', updateNavMenuTop);
+    }
+    window.addEventListener('DOMContentLoaded', updateNavMenuTop);
+    window.addEventListener('resize', updateNavMenuTop);
 
-      
+    // === Language Switcher ===
+    const translations = {
+      en: {
+        navHome: "Home",
+        navLab: "Laboratory",
+        navEngineering: "Engineering Study",
+        navAbout: "About",
+        navContact: "Contact us",
+        service1Title: "Water Treatment and Desalination",
+        service1Desc: "Ensuring water quality through reliable and innovative processes.",
+        service2Title: "Structure and Metal Framework",
+        service2Desc: "Robust and durable constructions thanks to tailor-made metal solutions.",
+        service3Title: "Hydraulics and Hydrology",
+        service3Desc: "Solving complex hydraulic and hydrological problems.",
+        service4Title: "Environment and Energy",
+        service4Desc: "Optimizing natural resources and reducing environmental impacts.",
+        service5Title: "Geotechnics",
+        service5Desc: "Ensuring the stability of soils and structures.",
+        analysis1Desc: "Ensuring water quality through reliable and innovative processes.",
+        analysis1Li1: "Preliminary studies, APS, APD and DCE",
+        analysis1Li2: "Sizing of wastewater treatment plants (WWTP), drinking water treatment plants (DWTP), and seawater desalination plants",
+        analysis1Li3: "Site plans, PFD (Process Flow Diagram), PID (Piping and Instrumentation Diagram), 3D layout",
+        analysis1Li4: "Project management and commissioning assistance",
+        analysis2Desc: "Robust and durable constructions thanks to tailor-made metal solutions.",
+        analysis2Li1: "Design studies and calculations for reinforced concrete and metal framework structures",
+        analysis2Li2: "Execution plans, calculation notes, modeling",
+        analysis2Li3: "Diagnosis and rehabilitation of existing structures",
+        analysis3Desc: "Solving complex hydraulic and hydrological problems.",
+        analysis3Li1: "Urban and rural hydraulic studies: supply networks, sanitation, drainage.",
+        analysis3Li2: "Sizing of hydraulic structures (canals, basins, dams, weirs).",
+        analysis3Li3: "Hydrological studies and flood modeling.",
+        analysis4Desc: "Optimizing natural resources and reducing environmental impacts.",
+        analysis4Li1: "Environmental impact studies and hydraulic notices",
+        analysis4Li2: "Integration of renewable energies (solaire, éolien, récupération d'énergie)",
+        analysis4Li3: "Energy optimization of treatment and pumping systems",
+        analysis4Li4: "Carbon footprint and support to achieve carbon neutrality",
+        analysis5Desc: "Ensuring the stability of soils and structures.",
+        analysis5Li1: "Soil studies and geotechnical reconnaissance",
+        analysis5Li2: "Sizing of shallow and deep foundations",
+        analysis5Li3: "Slope stability, retaining structures, liquefaction risks",
+        analysis5Li4: "Geotechnical site monitoring and technical assistance",
+        footerAboutTitle: "Horizons",
+        footerAboutText: "Serving sustainable innovation and environmentally friendly solutions for real impact.",
+        footerLinksTitle: "Links",
+        footerHome: "Home",
+        footerLab: "Laboratory",
+        footerEngineering: "Engineering Study",
+        footerAbout: "About",
+        footerContactTitle: "Contact us",
+        footerPhoneLabel: "Phone:",
+        footerAddressLabel: "Address:",
+        footerLocationTitle: "Our location",
+        footerCopyright: "© 2025 Horizons. All rights reserved.",
+      },
+      fr: {
+        navHome: "Accueil",
+        navLab: "Laboratoire",
+        navEngineering: "Etude et ingénierie",
+        navAbout: "À propos",
+        navContact: "contactez-nous",
+        service1Title: "Traitement des Eaux et Dessalement",
+        service1Desc: "Assurer une eau de qualité grâce à des procédés fiables et innovants.",
+        service2Title: "Structure et Charpente Métallique",
+        service2Desc: "Des constructions robustes et durables grâce à des solutions métalliques sur mesure.",
+        service3Title: "Hydraulique et Hydrologie",
+        service3Desc: "Résoudre les problèmes hydrauliques et hydrologiques complexes.",
+        service4Title: "Environnement et Énergie",
+        service4Desc: "Optimiser les ressources naturelles et réduire les impacts sur l'environnement.",
+        service5Title: "Géotechnique",
+        service5Desc: "Assurer la stabilité des sols et des ouvrages.",
+        analysis1Desc: "Assurer une eau de qualité grâce à des procédés fiables et innovants",
+        analysis1Li1: "Études préliminaires, APS, APD et DCE",
+        analysis1Li2: "Dimensionnement des stations d'épuration (STEP), stations de traitement d'eau potable (STEA) et des stations de dessalement de l'eau de mer",
+        analysis1Li3: "Plans de masse, PFD (Process Flow Diagram) ou schéma de flow de procédés, PID (Piping and Instrumentation Diagram) ou schéma de la tuyauterie et de l'instrumentation, implantation 3D",
+        analysis1Li4: "Gestion de projet et assistance à la mise en service",
+        analysis2Desc: "Des constructions robustes et durables grâce à des solutions métalliques sur mesure",
+        analysis2Li1: "Études de conception et calculs de structures en béton armé et charpente métallique",
+        analysis2Li2: "Plans d'exécution, notes de calcul, modélisations",
+        analysis2Li3: "Diagnostic et réhabilitation des ouvrages existants",
+        analysis3Desc: "Résoudre les problèmes hydrauliques et hydrologiques complexes.",
+        analysis3Li1: "Études hydrauliques urbaines et rurales : réseaux d'adduction, assainissement, drainage.",
+        analysis3Li2: "Dimensionnement des ouvrages hydrauliques (canaux, bassins, barrages, seuils).",
+        analysis3Li3: "Études hydrologiques et modélisation des crues.",
+        analysis4Desc: "Optimiser les ressources naturelles et réduire les impacts sur l'environnement",
+        analysis4Li1: "Études d'impact environnemental et notices hydrauliques",
+        analysis4Li2: "Intégration des énergies renouvelables (solaire, éolien, récupération d'énergie)",
+        analysis4Li3: "Optimisation énergétique des systèmes de traitement et de pompage",
+        analysis4Li4: "Bilan carbone et accompagnement pour atteindre la neutralité carbone",
+        analysis5Desc: "Assurer la stabilité des sols et des ouvrages",
+        analysis5Li1: "Études de sol et reconnaissance géotechnique",
+        analysis5Li2: "Dimensionnement des fondations superficielles et profondes",
+        analysis5Li3: "Stabilité des talus, soutènements, risques de liquéfaction",
+        analysis5Li4: "Suivi géotechnique de chantier et assistance technique",
+        footerAboutTitle: "Horizons",
+        footerAboutText: "Au service de l’innovation durable et de solutions respectueuses de l’environnement, pour un impact réel.",
+        footerLinksTitle: "Lien",
+        footerHome: "Accueil",
+        footerLab: "Laboratoire",
+        footerEngineering: "Etude et ingénierie",
+        footerAbout: "À propos",
+        footerContactTitle: "Contactez-nous",
+        footerPhoneLabel: "Téléphone:",
+        footerAddressLabel: "Adresse:",
+        footerLocationTitle: "Notre localisation",
+        footerCopyright: "© 2025 Horizons. Tous droits réservés.",
+      }
+    };
+    let currentLang = 'fr';
+    const langSwitchFloating = document.getElementById('lang-switch-floating');
+    function switchLanguage(lang) {
+      // Header
+      document.getElementById('nav-home').textContent = translations[lang].navHome;
+      document.getElementById('nav-lab').textContent = translations[lang].navLab;
+      document.getElementById('nav-engineering').textContent = translations[lang].navEngineering;
+      document.getElementById('nav-about').textContent = translations[lang].navAbout;
+      document.getElementById('nav-contact').textContent = translations[lang].navContact;
+      // Services
+      document.getElementById('service1-title').textContent = translations[lang].service1Title;
+      document.getElementById('service1-desc').textContent = translations[lang].service1Desc;
+      document.getElementById('service2-title').textContent = translations[lang].service2Title;
+      document.getElementById('service2-desc').textContent = translations[lang].service2Desc;
+      document.getElementById('service3-title').textContent = translations[lang].service3Title;
+      document.getElementById('service3-desc').textContent = translations[lang].service3Desc;
+      document.getElementById('service4-title').textContent = translations[lang].service4Title;
+      document.getElementById('service4-desc').textContent = translations[lang].service4Desc;
+      document.getElementById('service5-title').textContent = translations[lang].service5Title;
+      document.getElementById('service5-desc').textContent = translations[lang].service5Desc;
+      // Analysis 1
+      document.getElementById('analysis1-desc').textContent = translations[lang].analysis1Desc;
+      document.getElementById('analysis1-li1').textContent = translations[lang].analysis1Li1;
+      document.getElementById('analysis1-li2').textContent = translations[lang].analysis1Li2;
+      document.getElementById('analysis1-li3').textContent = translations[lang].analysis1Li3;
+      document.getElementById('analysis1-li4').textContent = translations[lang].analysis1Li4;
+      // Analysis 2
+      document.getElementById('analysis2-desc').textContent = translations[lang].analysis2Desc;
+      document.getElementById('analysis2-li1').textContent = translations[lang].analysis2Li1;
+      document.getElementById('analysis2-li2').textContent = translations[lang].analysis2Li2;
+      document.getElementById('analysis2-li3').textContent = translations[lang].analysis2Li3;
+      // Analysis 3
+      document.getElementById('analysis3-desc').textContent = translations[lang].analysis3Desc;
+      document.getElementById('analysis3-li1').textContent = translations[lang].analysis3Li1;
+      document.getElementById('analysis3-li2').textContent = translations[lang].analysis3Li2;
+      document.getElementById('analysis3-li3').textContent = translations[lang].analysis3Li3;
+      // Analysis 4
+      document.getElementById('analysis4-desc').textContent = translations[lang].analysis4Desc;
+      document.getElementById('analysis4-li1').textContent = translations[lang].analysis4Li1;
+      document.getElementById('analysis4-li2').textContent = translations[lang].analysis4Li2;
+      document.getElementById('analysis4-li3').textContent = translations[lang].analysis4Li3;
+      document.getElementById('analysis4-li4').textContent = translations[lang].analysis4Li4;
+      // Analysis 5
+      document.getElementById('analysis5-desc').textContent = translations[lang].analysis5Desc;
+      document.getElementById('analysis5-li1').textContent = translations[lang].analysis5Li1;
+      document.getElementById('analysis5-li2').textContent = translations[lang].analysis5Li2;
+      document.getElementById('analysis5-li3').textContent = translations[lang].analysis5Li3;
+      document.getElementById('analysis5-li4').textContent = translations[lang].analysis5Li4;
+      // Footer
+      document.getElementById('footer-about-title').textContent = translations[lang].footerAboutTitle;
+      document.getElementById('footer-about-text').textContent = translations[lang].footerAboutText;
+      document.getElementById('footer-links-title').textContent = translations[lang].footerLinksTitle;
+      document.getElementById('footer-home').textContent = translations[lang].footerHome;
+      document.getElementById('footer-lab').textContent = translations[lang].footerLab;
+      document.getElementById('footer-engineering').textContent = translations[lang].footerEngineering;
+      document.getElementById('footer-about').textContent = translations[lang].footerAbout;
+      document.getElementById('footer-contact-title').textContent = translations[lang].footerContactTitle;
+      document.getElementById('footer-phone-label').textContent = translations[lang].footerPhoneLabel;
+      document.getElementById('footer-address-label').textContent = translations[lang].footerAddressLabel;
+      document.getElementById('footer-location-title').textContent = translations[lang].footerLocationTitle;
+      document.getElementById('footer-copyright').textContent = translations[lang].footerCopyright;
+      // Update button text
+      // Update button flag
+      document.getElementById('lang-switch-flag').innerHTML = getFlagSVG(lang);
+      // Update dropdown flags and checkmarks
+      const enBtn = document.getElementById('lang-switch-option-en');
+      const frBtn = document.getElementById('lang-switch-option-fr');
+      enBtn.querySelector('.lang-switch-flag').innerHTML = getFlagSVG('en');
+      frBtn.querySelector('.lang-switch-flag').innerHTML = getFlagSVG('fr');
+      enBtn.querySelector('.lang-switch-check').style.display = lang === 'en' ? 'inline' : 'none';
+      frBtn.querySelector('.lang-switch-check').style.display = lang === 'fr' ? 'inline' : 'none';
+      // Animate flag
+      document.getElementById('lang-switch-flag').classList.remove('lang-switch-flag');
+      void document.getElementById('lang-switch-flag').offsetWidth;
+      document.getElementById('lang-switch-flag').classList.add('lang-switch-flag');
+      // Update ARIA
+      document.getElementById('lang-switch-floating').setAttribute('aria-expanded', 'false');
+      currentLang = lang;
+    }
+    // --- Language Switcher Dropdown Logic ---
+    function getFlagSVG(lang) {
+      if (lang === 'fr') {
+        return `<svg width="28" height="20" viewBox="0 0 3 2"><rect width="1" height="2" x="0" y="0" fill="#002395"/><rect width="1" height="2" x="1" y="0" fill="#fff"/><rect width="1" height="2" x="2" y="0" fill="#ed2939"/></svg>`;
+      } else {
+        return `<svg width="28" height="20" viewBox="0 0 7410 3900"><rect width="7410" height="3900" fill="#b22234"/><g fill="#fff"><g id="s18"><rect y="300" width="7410" height="300"/><rect y="900" width="7410" height="300"/><rect y="1500" width="7410" height="300"/><rect y="2100" width="7410" height="300"/><rect y="2700" width="7410" height="300"/><rect y="3300" width="7410" height="300"/></g></g><rect width="2964" height="2100" fill="#3c3b6e"/><g fill="#fff"><g id="s5"><g id="s4"><g id="s3"><g id="s2"><path id="s1" d="M247,90l-76.5,234.9 198.9-144.8H124.6L323.5,324.9z"/><use xlink:href="#s1" y="420"/><use xlink:href="#s1" y="840"/><use xlink:href="#s1" y="1260"/><use xlink:href="#s1" y="1680"/></g><use xlink:href="#s2" x="247" y="210"/></g><use xlink:href="#s3" x="494"/></g><use xlink:href="#s4" x="988"/></g><use xlink:href="#s5" x="1976"/></g></svg>`;
+      }
+    }
+    // Initial render
+    function renderLangSwitcher() {
+      document.getElementById('lang-switch-flag').innerHTML = getFlagSVG(currentLang);
+      const enBtn = document.getElementById('lang-switch-option-en');
+      const frBtn = document.getElementById('lang-switch-option-fr');
+      enBtn.querySelector('.lang-switch-flag').innerHTML = getFlagSVG('en');
+      frBtn.querySelector('.lang-switch-flag').innerHTML = getFlagSVG('fr');
+      enBtn.querySelector('.lang-switch-check').style.display = currentLang === 'en' ? 'inline' : 'none';
+      frBtn.querySelector('.lang-switch-check').style.display = currentLang === 'fr' ? 'inline' : 'none';
+    }
+    renderLangSwitcher();
+    // Dropdown toggle
+    const langSwitcherBtn = document.getElementById('lang-switch-floating');
+    const langDropdown = document.getElementById('lang-switch-dropdown');
+    langSwitcherBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      langDropdown.classList.toggle('show');
+      langSwitcherBtn.classList.toggle('open');
+      langSwitcherBtn.setAttribute('aria-expanded', langDropdown.classList.contains('show'));
+      // Focus first option for accessibility
+      if (langDropdown.classList.contains('show')) {
+        setTimeout(() => {
+          const first = langDropdown.querySelector('.lang-switch-option:not([disabled])');
+          if (first) first.focus();
+        }, 80);
+      }
+    });
+    // Option click
+    document.getElementById('lang-switch-option-en').addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (currentLang !== 'en') switchLanguage('en');
+      langDropdown.classList.remove('show');
+      langSwitcherBtn.classList.remove('open');
+      langSwitcherBtn.setAttribute('aria-expanded', 'false');
+    });
+    document.getElementById('lang-switch-option-fr').addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (currentLang !== 'fr') switchLanguage('fr');
+      langDropdown.classList.remove('show');
+      langSwitcherBtn.classList.remove('open');
+      langSwitcherBtn.setAttribute('aria-expanded', 'false');
+    });
+    // Hide dropdown on outside click
+    document.addEventListener('click', function (e) {
+      langDropdown.classList.remove('show');
+      langSwitcherBtn.classList.remove('open');
+      langSwitcherBtn.setAttribute('aria-expanded', 'false');
+    });
+    // Keyboard accessibility
+    langSwitcherBtn.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        langDropdown.classList.add('show');
+        langSwitcherBtn.classList.add('open');
+        langSwitcherBtn.setAttribute('aria-expanded', 'true');
+        setTimeout(() => {
+          const first = langDropdown.querySelector('.lang-switch-option:not([disabled])');
+          if (first) first.focus();
+        }, 80);
+      }
+    });
+    langDropdown.addEventListener('keydown', function (e) {
+      const options = Array.from(langDropdown.querySelectorAll('.lang-switch-option'));
+      const idx = options.indexOf(document.activeElement);
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        const next = options[(idx + 1) % options.length];
+        if (next) next.focus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        const prev = options[(idx - 1 + options.length) % options.length];
+        if (prev) prev.focus();
+      } else if (e.key === 'Escape') {
+        langDropdown.classList.remove('show');
+        langSwitcherBtn.classList.remove('open');
+        langSwitcherBtn.setAttribute('aria-expanded', 'false');
+        langSwitcherBtn.focus();
+      }
+    });
   </script>
 
 </body>
