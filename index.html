@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    <div id="preloader">
+        <img src="imag.png" alt="Horizons Logo" class="loader-logo" />
+    </div>
 
     <!-- header -->
     <header>
@@ -881,8 +884,15 @@
                 langSwitcherBtn.focus();
             }
         });
-    </script>
 
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            preloader.classList.add('fade-out');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+    </script>
 
 
 </body>

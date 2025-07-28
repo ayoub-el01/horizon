@@ -1646,3 +1646,23 @@ ul {
   position: fixed;
   right: 130px;
 }
+
+
+#preloader {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw; height: 100vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s;
+}
+#preloader.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+.loader-logo {
+  width: 120px;
+  height: 120px;
+}
