@@ -953,7 +953,7 @@ ul {
   margin-top: 102px;
   position: relative;
   width: 100%;
-  height: 102vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -997,7 +997,7 @@ ul {
 }
 
 .slide-1 {
-  background-image: url('1000115751.jpg');
+  background-image: url('photo.PNG');
 }
 
 .slide-2 {
