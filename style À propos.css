@@ -819,6 +819,7 @@ ul {
     border-radius: 14px;
     padding: 1.2rem 0.7rem 0.7rem 0.7rem;
   }
+
 }
 
 @media (max-width: 1100px) {
@@ -1153,3 +1154,4 @@ ul {
   position: fixed;
   right: 130px;
 }
+
