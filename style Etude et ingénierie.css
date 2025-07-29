@@ -389,6 +389,7 @@ ul {
   position: relative;
   margin-top: 100px;
   margin-bottom: 60px;
+  background: linear-gradient(135deg, rgba(33, 150, 243, 0.02) 0%, rgba(91, 192, 235, 0.01) 100%);
 }
 
 .big-cards-container {
@@ -403,42 +404,128 @@ ul {
 
 .big-card {
   position: relative;
-  background: #ffffff;
-  border-radius: 28px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.03);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 32px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.08),
+    0 4px 16px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
   overflow: hidden;
   min-width: 420px;
   max-width: 500px;
   flex: 1 1 460px;
   display: flex;
   flex-direction: column;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(33, 150, 243, 0.06);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(33, 150, 243, 0.08);
   min-height: 480px;
+  isolation: isolate;
+  animation: cardFadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) both, cardFloat 6s ease-in-out infinite;
+}
+
+.big-card:nth-child(1) {
+  animation-delay: 0.1s, 0s;
+}
+
+.big-card:nth-child(2) {
+  animation-delay: 0.2s, 0.5s;
+}
+
+@keyframes cardFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes cardFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.big-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(33, 150, 243, 0.03) 0%, 
+    rgba(91, 192, 235, 0.02) 50%, 
+    rgba(0, 188, 212, 0.01) 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+.big-card::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, 
+    rgba(33, 150, 243, 0.1) 0%, 
+    rgba(91, 192, 235, 0.05) 50%, 
+    rgba(0, 188, 212, 0.02) 100%);
+  border-radius: 34px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -2;
+  filter: blur(8px);
 }
 
 .big-card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 20px 60px rgba(33, 150, 243, 0.12), 0 8px 24px rgba(33, 150, 243, 0.08);
-  border-color: rgba(33, 150, 243, 0.15);
+  transform: translateY(-16px) scale(1.02);
+  box-shadow: 
+    0 24px 80px rgba(33, 150, 243, 0.15),
+    0 12px 32px rgba(33, 150, 243, 0.1),
+    0 4px 16px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border-color: rgba(33, 150, 243, 0.2);
+  animation-play-state: paused;
+}
+
+
+
+.big-card:hover::before {
+  opacity: 1;
+}
+
+.big-card:hover::after {
+  opacity: 1;
 }
 
 .card-image-container {
   position: relative;
   width: 100%;
-  height: 240px;
+  height: 260px;
   overflow: hidden;
+  border-radius: 32px 32px 0 0;
 }
 
 .big-card-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(1.02) contrast(1.05);
 }
 
 .big-card:hover .big-card-image {
-  transform: scale(1.08);
+  transform: scale(1.12);
+  filter: brightness(1.08) contrast(1.1) saturate(1.1);
 }
 
 .card-overlay {
@@ -447,9 +534,12 @@ ul {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(33, 150, 243, 0.08) 0%, rgba(91, 192, 235, 0.04) 100%);
+  background: linear-gradient(135deg, 
+    rgba(33, 150, 243, 0.12) 0%, 
+    rgba(91, 192, 235, 0.08) 50%, 
+    rgba(0, 188, 212, 0.04) 100%);
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.5s ease;
 }
 
 .big-card:hover .card-overlay {
@@ -457,58 +547,118 @@ ul {
 }
 
 .card-content {
-  padding: 36px 32px 32px 32px;
+  padding: 40px 36px 36px 36px;
   display: flex;
   flex-direction: column;
   flex: 1;
+  position: relative;
+}
+
+.card-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 36px;
+  right: 36px;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(33, 150, 243, 0.1) 50%, 
+    transparent 100%);
 }
 
 .big-card h2 {
-  color: #0b3954;
-  font-size: 2.1rem;
-  margin-bottom: 20px;
-  font-weight: 700;
+  background: linear-gradient(135deg, #0b3954 0%, #2196f3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2.2rem;
+  margin-bottom: 24px;
+  font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.8px;
+  position: relative;
+}
+
+.big-card h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #2196f3, #5bc0eb);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.big-card:hover h2::after {
+  width: 80px;
 }
 
 .big-card p {
   color: #64748b;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 32px;
+  font-size: 1.15rem;
+  line-height: 1.75;
+  margin-bottom: 36px;
   font-weight: 400;
   flex: 1;
+  position: relative;
 }
 
 .card-link {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   color: #2196f3;
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 1.05rem;
   text-decoration: none;
-  padding: 14px 0;
-  transition: all 0.3s ease;
-  border-bottom: 2px solid transparent;
+  padding: 16px 28px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50px;
   width: fit-content;
   position: relative;
+  background: linear-gradient(135deg, rgba(33, 150, 243, 0.08) 0%, rgba(91, 192, 235, 0.04) 100%);
+  border: 2px solid rgba(33, 150, 243, 0.1);
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(33, 150, 243, 0.08);
+}
+
+.card-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(33, 150, 243, 0.1) 50%, 
+    transparent 100%);
+  transition: left 0.5s ease;
 }
 
 .card-link:hover {
   color: #0b3954;
-  border-bottom-color: #2196f3;
-  transform: translateX(6px);
+  background: linear-gradient(135deg, rgba(33, 150, 243, 0.15) 0%, rgba(91, 192, 235, 0.08) 100%);
+  border-color: rgba(33, 150, 243, 0.25);
+  transform: translateX(8px) translateY(-2px);
+  box-shadow: 0 12px 32px rgba(33, 150, 243, 0.2), 0 4px 16px rgba(91, 192, 235, 0.1);
+}
+
+.card-link:hover::before {
+  left: 100%;
 }
 
 .card-link svg {
-  transition: transform 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   stroke-width: 2.5;
+  filter: drop-shadow(0 2px 4px rgba(33, 150, 243, 0.2));
 }
 
 .card-link:hover svg {
-  transform: translateX(6px);
+  transform: translateX(8px) scale(1.1);
 }
 
 @media (max-width: 900px) {
@@ -523,15 +673,24 @@ ul {
     min-width: 0;
     width: 100%;
     min-height: 420px;
+    border-radius: 28px;
   }
   .card-content {
-    padding: 28px 24px 24px 24px;
+    padding: 32px 28px 28px 28px;
+  }
+  .card-content::before {
+    left: 28px;
+    right: 28px;
   }
   .big-card h2 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
   .card-image-container {
-    height: 200px;
+    height: 220px;
+    border-radius: 28px 28px 0 0;
+  }
+  .card-link {
+    padding: 14px 20px;
   }
 }
 
@@ -543,23 +702,37 @@ ul {
     min-width: 0;
     width: 100%;
     min-height: 380px;
+    border-radius: 24px;
   }
   .card-image-container {
-    height: 180px;
+    height: 200px;
+    border-radius: 24px 24px 0 0;
   }
   .card-content {
-    padding: 24px 20px 20px 20px;
+    padding: 28px 24px 24px 24px;
+  }
+  .card-content::before {
+    left: 24px;
+    right: 24px;
   }
   .big-card h2 {
-    font-size: 1.6rem;
-    margin-bottom: 16px;
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+  .big-card h2::after {
+    width: 50px;
+    height: 2px;
+  }
+  .big-card:hover h2::after {
+    width: 65px;
   }
   .big-card p {
-    font-size: 1rem;
-    margin-bottom: 24px;
+    font-size: 1.05rem;
+    margin-bottom: 28px;
   }
   .card-link {
-    font-size: 0.95rem;
+    font-size: 1rem;
+    padding: 12px 18px;
   }
 }
 
