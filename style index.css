@@ -1005,7 +1005,8 @@ ul {
 }
 
 .slide-3 {
-  background-image: url('image.png');
+  background-image: url('image\ 2.PNG');
+  background-size: 100% 100%;
 }
 
 .slide-4 {
