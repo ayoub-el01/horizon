@@ -421,36 +421,8 @@ ul {
   border: 1px solid rgba(33, 150, 243, 0.08);
   min-height: 480px;
   isolation: isolate;
-  animation: cardFadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) both, cardFloat 6s ease-in-out infinite;
 }
 
-.big-card:nth-child(1) {
-  animation-delay: 0.1s, 0s;
-}
-
-.big-card:nth-child(2) {
-  animation-delay: 0.2s, 0.5s;
-}
-
-@keyframes cardFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(30px) scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes cardFloat {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
 
 .big-card::before {
   content: '';
@@ -487,14 +459,13 @@ ul {
 }
 
 .big-card:hover {
-  transform: translateY(-16px) scale(1.02);
+  transform: translateY(-2px) scale(1.02);
   box-shadow: 
     0 24px 80px rgba(33, 150, 243, 0.15),
     0 12px 32px rgba(33, 150, 243, 0.1),
     0 4px 16px rgba(0, 0, 0, 0.05),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
   border-color: rgba(33, 150, 243, 0.2);
-  animation-play-state: paused;
 }
 
 
@@ -524,7 +495,7 @@ ul {
 }
 
 .big-card:hover .big-card-image {
-  transform: scale(1.12);
+  transform: scale(1.03);
   filter: brightness(1.08) contrast(1.1) saturate(1.1);
 }
 
