@@ -21,29 +21,31 @@
                     <img src="imag.png" alt="Horizons Logo" class="logo-img">
                 </a>
             </div>
+
+            <ul class="nav_menu">
+                <li>
+                    <a href="index.html" class="nav_link" id="nav-home">Accueil</a>
+                </li>
+                <li>
+                    <a href="Laboratoire.html" class="nav_link" id="nav-lab">Laboratoire</a>
+                </li>
+                <li>
+                    <a href="Etude et ingénierie.html" class="nav_link" id="nav-engineering">Etude et ingénierie</a>
+                </li>
+                <li>
+                    <a href="À propos.html" class="nav_link" id="nav-about">À propos</a>
+                </li>
+                <li>
+                    <button class="botun" onclick="window.location.href='contact.html'"
+                        id="nav-contact">contactez-nous</button>
+                </li>
+            </ul>
+
             <button class="navbar-toggle" aria-label="Toggle navigation">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
-            <ul class="nav_menu">
-                <li class="nav_item1">
-                    <a href="index.html" class="nav_link" id="nav-home">Accueil</a>
-                </li>
-                <li class="nav_item1">
-                    <a href="Laboratoire.html" class="nav_link" id="nav-lab">Laboratoire</a>
-                </li>
-                <li class="nav_item1">
-                    <a href="Etude et ingénierie.html" class="nav_link" id="nav-engineering">Etude et ingénierie</a>
-                </li>
-                <li class="nav_item1">
-                    <a href="À propos.html" class="nav_link" id="nav-about">À propos</a>
-                </li>
-                <li class="nav_item">
-                    <button class="botun" onclick="window.location.href='contact.html'"
-                        id="nav-contact">contactez-nous</button>
-                </li>
-            </ul>
         </nav>
     </header>
 
@@ -468,7 +470,6 @@
             const rightArrow = document.querySelector('.nav-arrow-right');
             const indicators = document.querySelectorAll('.indicator');
 
-            // Since we only have one slide, we'll just add click handlers for future expansion
             leftArrow.addEventListener('click', function () {
                 console.log('Previous slide');
             });
@@ -571,11 +572,50 @@
         const toggle = document.querySelector('.navbar-toggle');
         const navMenu = document.querySelector('.nav_menu');
         if (toggle && navMenu) {
+            const navItems = navMenu.querySelectorAll('li');
+            navItems.forEach((item, index) => {
+                item.style.setProperty('--item-index', index);
+            });
+
             toggle.addEventListener('click', () => {
                 navMenu.classList.toggle('open');
                 toggle.classList.toggle('open');
             });
+
+            // Close menu when clicking on a link
+            const navLinks = document.querySelectorAll('.nav_link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('open');
+                    toggle.classList.remove('open');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!toggle.contains(e.target) && !navMenu.contains(e.target)) {
+                    navMenu.classList.remove('open');
+                    toggle.classList.remove('open');
+                }
+            });
         }
+
+        // Set active navigation link based on current page
+        function setActiveNavLink() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.nav_link');
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                const href = link.getAttribute('href');
+                if (href === currentPage || (currentPage === 'index.html' && href === 'index.html')) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Call on page load
+        setActiveNavLink();
         // Back to Top button 
         const backToTopBtn = document.getElementById('backToTop');
         window.onscroll = function () {
@@ -885,7 +925,7 @@
             }
         });
 
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             const preloader = document.getElementById('preloader');
             preloader.classList.add('fade-out');
             setTimeout(() => {

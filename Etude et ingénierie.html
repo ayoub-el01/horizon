@@ -19,11 +19,6 @@
           <img src="imag.png" alt="Horizons Logo" class="logo-img">
         </a>
       </div>
-      <button class="navbar-toggle" aria-label="Toggle navigation">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
       <ul class="nav_menu">
         <li class="nav_item1">
           <a href="index.html" class="nav_link" id="nav-home">Accueil</a>
@@ -41,6 +36,11 @@
           <button class="botun" onclick="window.location.href='contact.html'" id="nav-contact">contactez-nous</button>
         </li>
       </ul>
+      <button class="navbar-toggle" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
     </nav>
   </header>
 
@@ -270,11 +270,36 @@
     const toggle = document.querySelector('.navbar-toggle');
     const navMenu = document.querySelector('.nav_menu');
     if (toggle && navMenu) {
+      const navItems = navMenu.querySelectorAll('li');
+      navItems.forEach((item, index) => {
+        item.style.setProperty('--item-index', index);
+      });
+
       toggle.addEventListener('click', () => {
         navMenu.classList.toggle('open');
         toggle.classList.toggle('open');
       });
+
+      // Close menu when clicking on a link
+      const navLinks = document.querySelectorAll('.nav_link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('open');
+          toggle.classList.remove('open');
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!toggle.contains(e.target) && !navMenu.contains(e.target)) {
+          navMenu.classList.remove('open');
+          toggle.classList.remove('open');
+        }
+      });
     }
+
+
+
     const backToTopBtn = document.getElementById('backToTop');
     window.onscroll = function () {
       if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
@@ -625,6 +650,34 @@
         langSwitcherBtn.focus();
       }
     });
+
+    // Set active navigation link based on current page
+    function setActiveNavLink() {
+      const currentPage = window.location.pathname.split('/').pop() || 'Etude et ingénierie.html';
+      const navLinks = document.querySelectorAll('.nav_link');
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href');
+        if (href === currentPage || (currentPage === 'Etude et ingénierie.html' && href === 'Etude et ingénierie.html')) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+
+    // Call the function when the page loads
+    document.addEventListener('DOMContentLoaded', setActiveNavLink);
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const aboutLink = document.querySelector('a[href="Etude et ingénierie.html"]');
+      if (aboutLink) {
+        aboutLink.classList.add('active');
+      }
+    });
+
+
+
   </script>
 
 </body>
