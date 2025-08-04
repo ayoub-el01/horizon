@@ -786,8 +786,7 @@ header {
 }
 
 .about-card:hover {
-  box-shadow: 0 24px 64px rgba(33, 150, 243, 0.22), 0 12px 36px rgba(0, 188, 212, 0.13);
-  transform: translateY(-2px) scale(1.004);
+  transform: scale(1.004);
   background: rgba(255, 255, 255, 0.32);
 }
 
