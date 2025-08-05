@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horizon</title>
+    <title>Horizons</title>
     <link rel="stylesheet" href="style index.css">
 </head>
 
@@ -30,9 +30,6 @@
                     <a href="Laboratoire.html" class="nav_link" id="nav-lab">Laboratoire</a>
                 </li>
                 <li>
-                    <a href="Etude et ingénierie.html" class="nav_link" id="nav-engineering">Etude et ingénierie</a>
-                </li>
-                <li>
                     <a href="À propos.html" class="nav_link" id="nav-about">À propos</a>
                 </li>
                 <li>
@@ -54,7 +51,6 @@
         <div class="slide slide-1 active"></div>
         <div class="slide slide-2"></div>
         <div class="slide slide-3"></div>
-        <div class="slide slide-4"></div>
 
         <!-- Water background effects -->
         <div class="water-background">
@@ -97,25 +93,15 @@
                     plus</button>
             </div>
 
+
             <!-- Content for Slide 3 -->
             <div class="slide-content">
-                <h1 id="slide3-title">Etude et ingénierie</h1>
-                <h2 id="slide3-subtitle">Expertise et Solutions Sur-Mesure</h2>
-                <p id="slide3-desc">Nous concevons des solutions innovantes et personnalisées, alliant rigueur technique
-                    et respect de l’environnement, pour garantir la réussite de vos projets, de la conception à la
-                    réalisation.</p>
-                <button class="cta-button" onclick="window.location.href='Etude et ingénierie.html'" id="slide3-btn">En
-                    savoir plus</button>
-            </div>
-
-            <!-- Content for Slide 4 -->
-            <div class="slide-content">
-                <h1 id="slide4-title">Contactez-nous</h1>
-                <h2 id="slide4-subtitle">Un projet ? Une question ? Parlons-en !</h2>
-                <p id="slide4-desc">Nous sommes à votre écoute pour répondre à vos questions et vous accompagner dans la
+                <h1 id="slide3-title">Contactez-nous</h1>
+                <h2 id="slide3-subtitle">Un projet ? Une question ? Parlons-en !</h2>
+                <p id="slide3-desc">Nous sommes à votre écoute pour répondre à vos questions et vous accompagner dans la
                     réalisation de vos projets.</p>
                 <button class="cta-button" onclick="window.location.href='contact.html'"
-                    id="slide4-btn">Contactez-nous</button>
+                    id="slide3-btn">Contactez-nous</button>
             </div>
         </div>
 
@@ -128,7 +114,6 @@
             <div class="dot active" onclick="goToSlide(0)"></div>
             <div class="dot" onclick="goToSlide(1)"></div>
             <div class="dot" onclick="goToSlide(2)"></div>
-            <div class="dot" onclick="goToSlide(3)"></div>
         </div>
 
         <!-- Progress bar -->
@@ -138,102 +123,6 @@
     </div>
 
 
-
-
-    <!-- section 1 -->
-    <section class="engineering-section">
-        <!-- Background Pattern -->
-        <div class="background-pattern"></div>
-
-        <div class="container">
-            <div class="content-grid">
-                <!-- Image Section -->
-                <div class="image-section">
-                    <div class="image-wrapper">
-                        <img src="1000115760.jpg"
-                            alt="Équipe d'ingénieurs travaillant sur des projets de traitement de l'eau"
-                            class="main-image" />
-                        <div class="image-overlay"></div>
-
-                    </div>
-
-                    <!-- Floating Elements -->
-                    <div class="floating-element floating-element-1"></div>
-                    <div class="floating-element floating-element-2"></div>
-                </div>
-
-                <!-- Content Section -->
-                <div class="content-section">
-                    <div class="content-wrapper">
-                        <div class="header-section">
-                            <div class="title-wrapper">
-
-                                <div>
-                                    <h2 class="main-title">
-                                        <span id="section1-title1">Études &</span><br />
-                                        <span class="gradient-text" id="section1-title2">Ingénierie</span>
-                                    </h2>
-                                </div>
-                            </div>
-
-                            <p class="description">
-                                <span id="section1-desc">Solutions d'ingénierie sur mesure pour la gestion et le
-                                    traitement de l'eau. De la conception à la mise en œuvre, nous accompagnons vos
-                                    projets avec expertise et innovation pour des résultats durables.</span>
-                            </p>
-                        </div>
-
-                        <!-- Services Cards -->
-                        <div class="services-grid">
-                            <div class="service-card" data-delay="0">
-                                <div class="service-content">
-                                    <div class="service-text">
-                                        <h3 class="service-title">Études de faisabilité détaillées</h3>
-                                        <p class="service-description" id="section1-card1-desc">Analyse approfondie de
-                                            vos besoins et contraintes pour définir la solution optimale</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="service-card" data-delay="100">
-                                <div class="service-content">
-
-                                    <div class="service-text">
-                                        <h3 class="service-title">Conception de systèmes de traitement</h3>
-                                        <p class="service-description" id="section1-card2-desc">Développement de
-                                            solutions techniques sur mesure adaptées à votre contexte</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="service-card" data-delay="200">
-                                <div class="service-content">
-
-                                    <div class="service-text">
-                                        <h3 class="service-title">Suivi et maintenance technique</h3>
-                                        <p class="service-description" id="section1-card3-desc">Accompagnement continu
-                                            pour garantir la performance de vos installations</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- CTA Button -->
-                        <div class="cta-section">
-                            <button class="cta-button" onclick="window.location.href='Etude et ingénierie.html'">
-                                <span id="section1-btn">En savoir plus</span>
-                                <svg class="cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M5 12h14" />
-                                    <path d="M12 5l7 7-7 7" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
 
@@ -364,8 +253,8 @@
                 <ul>
                     <li><a href="index.html" id="footer-home">Accueil</a></li>
                     <li><a href="Laboratoire.html" id="footer-lab">Laboratoire</a></li>
-                    <li><a href="Etude et ingénierie.html" id="footer-engineering">Etude et ingénierie</a></li>
                     <li><a href="À propos.html" id="footer-about">À propos</a></li>
+                    <li><a href="contact.html" id="footer-contact">Contact</a></li>
                 </ul>
             </div>
 
@@ -668,7 +557,6 @@
             en: {
                 navHome: "Home",
                 navLab: "Laboratory",
-                navEngineering: "Engineering Study",
                 navAbout: "About",
                 navContact: "Contact us",
                 slide1Title: "Welcome to HORIZONS",
@@ -706,7 +594,6 @@
                 footerLinksTitle: "Links",
                 footerHome: "Home",
                 footerLab: "Laboratory",
-                footerEngineering: "Engineering Study",
                 footerAbout: "About",
                 footerContactTitle: "Contact us",
                 footerPhoneLabel: "Phone:",
@@ -717,7 +604,6 @@
             fr: {
                 navHome: "Accueil",
                 navLab: "Laboratoire",
-                navEngineering: "Etude et ingénierie",
                 navAbout: "À propos",
                 navContact: "contactez-nous",
                 slide1Title: "Bienvenue chez HORIZONS",
@@ -755,7 +641,6 @@
                 footerLinksTitle: "Lien",
                 footerHome: "Accueil",
                 footerLab: "Laboratoire",
-                footerEngineering: "Etude et ingénierie",
                 footerAbout: "À propos",
                 footerContactTitle: "Contactez-nous",
                 footerPhoneLabel: "Téléphone:",
@@ -770,7 +655,6 @@
             // Header
             document.getElementById('nav-home').textContent = translations[lang].navHome;
             document.getElementById('nav-lab').textContent = translations[lang].navLab;
-            document.getElementById('nav-engineering').textContent = translations[lang].navEngineering;
             document.getElementById('nav-about').textContent = translations[lang].navAbout;
             document.getElementById('nav-contact').textContent = translations[lang].navContact;
             // Slides
@@ -812,7 +696,6 @@
             document.getElementById('footer-links-title').textContent = translations[lang].footerLinksTitle;
             document.getElementById('footer-home').textContent = translations[lang].footerHome;
             document.getElementById('footer-lab').textContent = translations[lang].footerLab;
-            document.getElementById('footer-engineering').textContent = translations[lang].footerEngineering;
             document.getElementById('footer-about').textContent = translations[lang].footerAbout;
             document.getElementById('footer-contact-title').textContent = translations[lang].footerContactTitle;
             document.getElementById('footer-phone-label').textContent = translations[lang].footerPhoneLabel;

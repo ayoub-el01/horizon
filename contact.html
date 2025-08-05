@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>contact horizons</title>
+  <title>Horizons</title>
   <link rel="stylesheet" href="style contact.css">
 </head>
 
@@ -22,9 +22,6 @@
         </li>
         <li class="nav_item1">
           <a href="Laboratoire.html" class="nav_link" id="nav-lab">Laboratoire</a>
-        </li>
-        <li class="nav_item1">
-          <a href="Etude et ingénierie.html" class="nav_link" id="nav-engineering">Etude et ingénierie</a>
         </li>
         <li class="nav_item1">
           <a href="À propos.html" class="nav_link" id="nav-about">À propos</a>
@@ -117,8 +114,8 @@
         <ul>
           <li><a href="index.html" id="footer-home">Accueil</a></li>
           <li><a href="Laboratoire.html" id="footer-lab">Laboratoire</a></li>
-          <li><a href="Etude et ingénierie.html" id="footer-engineering">Etude et ingénierie</a></li>
           <li><a href="À propos.html" id="footer-about">À propos</a></li>
+          <li><a href="contact.html" id="footer-contact">Contact</a></li>
         </ul>
       </div>
 
@@ -237,7 +234,6 @@
       en: {
         navHome: "Home",
         navLab: "Laboratory",
-        navEngineering: "Engineering Study",
         navAbout: "About",
         navContact: "Contact us",
         contactTitle: "Contact <span class='blue-accent'>Us</span>",
@@ -259,7 +255,6 @@
         footerLinksTitle: "Links",
         footerHome: "Home",
         footerLab: "Laboratory",
-        footerEngineering: "Engineering Study",
         footerAbout: "About",
         footerContactTitle: "Contact us",
         footerPhoneLabel: "Phone:",
@@ -270,7 +265,6 @@
       fr: {
         navHome: "Accueil",
         navLab: "Laboratoire",
-        navEngineering: "Etude et ingénierie",
         navAbout: "À propos",
         navContact: "contactez-nous",
         contactTitle: "Contactez-<span class='blue-accent'>nous</span>",
@@ -292,7 +286,6 @@
         footerLinksTitle: "Lien",
         footerHome: "Accueil",
         footerLab: "Laboratoire",
-        footerEngineering: "Etude et ingénierie",
         footerAbout: "À propos",
         footerContactTitle: "Contactez-nous",
         footerPhoneLabel: "Téléphone:",
@@ -307,7 +300,6 @@
       // Header
       document.getElementById('nav-home').textContent = translations[lang].navHome;
       document.getElementById('nav-lab').textContent = translations[lang].navLab;
-      document.getElementById('nav-engineering').textContent = translations[lang].navEngineering;
       document.getElementById('nav-about').textContent = translations[lang].navAbout;
       document.getElementById('nav-contact').textContent = translations[lang].navContact;
       // Contact Section
@@ -331,7 +323,6 @@
       document.getElementById('footer-links-title').textContent = translations[lang].footerLinksTitle;
       document.getElementById('footer-home').textContent = translations[lang].footerHome;
       document.getElementById('footer-lab').textContent = translations[lang].footerLab;
-      document.getElementById('footer-engineering').textContent = translations[lang].footerEngineering;
       document.getElementById('footer-about').textContent = translations[lang].footerAbout;
       document.getElementById('footer-contact-title').textContent = translations[lang].footerContactTitle;
       document.getElementById('footer-phone-label').textContent = translations[lang].footerPhoneLabel;
