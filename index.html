@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horizons</title>
+    <title>HORIZONS-LAB</title>
     <link rel="stylesheet" href="style index.css">
 </head>
 
@@ -73,10 +73,9 @@
         <div class="slider-content">
             <!-- Content for Slide 1 -->
             <div class="slide-content active">
-                <h1 id="slide1-title">Bienvenue chez HORIZONS</h1>
-                <h2 id="slide1-subtitle">Ingénierie – Environnement – Analyses des Eaux</h2>
-                <p id="slide1-desc">Chez HORIZONS, nous accompagnons industriels, collectivités et porteurs de projets
-                    dans la conception durable, le contrôle de la qualité des eaux, la gestion des projets
+                <h1 id="slide1-title">Bienvenue chez HORIZONS-LAB</h1>
+                <p id="slide1-desc">Chez HORIZONS-LAB, nous accompagnons industriels, collectivités et porteurs de projets
+                    , le contrôle de la qualité des eaux, la gestion des projets
                     environne-mentaux et l’opération des infrastructures de traitement des eaux.</p>
                 <button class="cta-button" onclick="window.location.href='À propos.html'" id="slide1-btn">En savoir
                     plus</button>
@@ -559,9 +558,8 @@
                 navLab: "Laboratory",
                 navAbout: "About",
                 navContact: "Contact us",
-                slide1Title: "Welcome to HORIZONS",
-                slide1Subtitle: "Engineering – Environment – Water Analysis",
-                slide1Desc: "At HORIZONS, we support industries, communities, and project leaders in sustainable design, water quality control, environmental project management, and operation of water treatment facilities.",
+                slide1Title: "Welcome to HORIZONS-LAB",
+                slide1Desc: "At HORIZONS-LAB, we support industries, communities, and project leaders in sustainable design, water quality control, environmental project management, and operation of water treatment facilities.",
                 slide1Btn: "Learn more",
                 slide2Title: "Excellence Laboratory",
                 slide2Subtitle: "Reliable & Innovative Analyses",
@@ -571,17 +569,6 @@
                 slide3Subtitle: "Expertise and Tailor-Made Solutions",
                 slide3Desc: "We design innovative and personalized solutions, combining technical rigor and respect for the environment, to ensure the success of your projects from design to completion.",
                 slide3Btn: "Learn more",
-                slide4Title: "Contact us",
-                slide4Subtitle: "A project? A question? Let's talk!",
-                slide4Desc: "We are here to answer your questions and support you in carrying out your projects.",
-                slide4Btn: "Contact us",
-                section1Title1: "Studies &",
-                section1Title2: "Engineering",
-                section1Desc: "Tailor-made engineering solutions for water management and treatment. From design to implementation, we support your projects with expertise and innovation for sustainable results.",
-                section1Card1Desc: "In-depth analysis of your needs and constraints to define the optimal solution",
-                section1Card2Desc: "Development of tailor-made technical solutions adapted to your context",
-                section1Card3Desc: "Continuous support to ensure the performance of your facilities",
-                section1Btn: "Learn more",
                 section2Title1: "Excellence Laboratory",
                 section2Title2: "Reliable & Innovative Analyses",
                 section2Desc: "Our laboratory performs precise and rigorous water analyses, ensuring the quality, safety, and compliance of your projects thanks to state-of-the-art equipment and an experienced team.",
@@ -606,9 +593,8 @@
                 navLab: "Laboratoire",
                 navAbout: "À propos",
                 navContact: "contactez-nous",
-                slide1Title: "Bienvenue chez HORIZONS",
-                slide1Subtitle: "Ingénierie – Environnement – Analyses des Eaux",
-                slide1Desc: "Chez HORIZONS, nous accompagnons industriels, collectivités et porteurs de projets dans la conception durable, le contrôle de la qualité des eaux, la gestion des projets environne-mentaux et l’opération des infrastructures de traitement des eaux.",
+                slide1Title: "Bienvenue chez HORIZONS-LAB",
+                slide1Desc: "Chez HORIZONS-LAB, nous accompagnons industriels, collectivités et porteurs de projets, le contrôle de la qualité des eaux, la gestion des projets environne-mentaux et l’opération des infrastructures de traitement des eaux.",
                 slide1Btn: "En savoir plus",
                 slide2Title: "Laboratoire d’Excellence",
                 slide2Subtitle: "Analyses Fiables & Innovantes",
@@ -618,17 +604,6 @@
                 slide3Subtitle: "Expertise et Solutions Sur-Mesure",
                 slide3Desc: "Nous concevons des solutions innovantes et personnalisées, alliant rigueur technique et respect de l’environnement, pour garantir la réussite de vos projets, de la conception à la réalisation.",
                 slide3Btn: "En savoir plus",
-                slide4Title: "Contactez-nous",
-                slide4Subtitle: "Un projet ? Une question ? Parlons-en !",
-                slide4Desc: "Nous sommes à votre écoute pour répondre à vos questions et vous accompagner dans la réalisation de vos projets.",
-                slide4Btn: "Contactez-nous",
-                section1Title1: "Études &",
-                section1Title2: "Ingénierie",
-                section1Desc: "Solutions d'ingénierie sur mesure pour la gestion et le traitement de l'eau. De la conception à la mise en œuvre, nous accompagnons vos projets avec expertise et innovation pour des résultats durables.",
-                section1Card1Desc: "Analyse approfondie de vos besoins et contraintes pour définir la solution optimale",
-                section1Card2Desc: "Développement de solutions techniques sur mesure adaptées à votre contexte",
-                section1Card3Desc: "Accompagnement continu pour garantir la performance de vos installations",
-                section1Btn: "En savoir plus",
                 section2Title1: "Laboratoire d’Excellence",
                 section2Title2: "Analyses Fiables & Innovantes",
                 section2Desc: "Notre laboratoire réalise des analyses précises et rigoureuses de l’eau, garantissant la qualité, la sécurité et la conformité de vos projets grâce à des équipements de pointe et une équipe expérimentée.",
@@ -649,59 +624,52 @@
                 footerCopyright: "© 2025 Horizons. Tous droits réservés.",
             }
         };
+
+        function setText(id, value) {
+            const el = document.getElementById(id);
+            if (el) el.textContent = value;
+        }
+
         let currentLang = 'fr';
         const langSwitchFloating = document.getElementById('lang-switch-floating');
         function switchLanguage(lang) {
             // Header
-            document.getElementById('nav-home').textContent = translations[lang].navHome;
-            document.getElementById('nav-lab').textContent = translations[lang].navLab;
-            document.getElementById('nav-about').textContent = translations[lang].navAbout;
-            document.getElementById('nav-contact').textContent = translations[lang].navContact;
+            setText('nav-home', translations[lang].navHome);
+            setText('nav-lab', translations[lang].navLab);
+            setText('nav-about', translations[lang].navAbout);
+            setText('nav-contact', translations[lang].navContact);
             // Slides
-            document.getElementById('slide1-title').textContent = translations[lang].slide1Title;
-            document.getElementById('slide1-subtitle').textContent = translations[lang].slide1Subtitle;
-            document.getElementById('slide1-desc').textContent = translations[lang].slide1Desc;
-            document.getElementById('slide1-btn').textContent = translations[lang].slide1Btn;
-            document.getElementById('slide2-title').textContent = translations[lang].slide2Title;
-            document.getElementById('slide2-subtitle').textContent = translations[lang].slide2Subtitle;
-            document.getElementById('slide2-desc').textContent = translations[lang].slide2Desc;
-            document.getElementById('slide2-btn').textContent = translations[lang].slide2Btn;
-            document.getElementById('slide3-title').textContent = translations[lang].slide3Title;
-            document.getElementById('slide3-subtitle').textContent = translations[lang].slide3Subtitle;
-            document.getElementById('slide3-desc').textContent = translations[lang].slide3Desc;
-            document.getElementById('slide3-btn').textContent = translations[lang].slide3Btn;
-            document.getElementById('slide4-title').textContent = translations[lang].slide4Title;
-            document.getElementById('slide4-subtitle').textContent = translations[lang].slide4Subtitle;
-            document.getElementById('slide4-desc').textContent = translations[lang].slide4Desc;
-            document.getElementById('slide4-btn').textContent = translations[lang].slide4Btn;
-            // Section 1
-            document.getElementById('section1-title1').textContent = translations[lang].section1Title1;
-            document.getElementById('section1-title2').textContent = translations[lang].section1Title2;
-            document.getElementById('section1-desc').textContent = translations[lang].section1Desc;
-            document.getElementById('section1-card1-desc').textContent = translations[lang].section1Card1Desc;
-            document.getElementById('section1-card2-desc').textContent = translations[lang].section1Card2Desc;
-            document.getElementById('section1-card3-desc').textContent = translations[lang].section1Card3Desc;
-            document.getElementById('section1-btn').textContent = translations[lang].section1Btn;
+            setText('slide1-title', translations[lang].slide1Title);
+            setText('slide1-desc', translations[lang].slide1Desc);
+            setText('slide1-btn', translations[lang].slide1Btn);
+            setText('slide2-title', translations[lang].slide2Title);
+            setText('slide2-subtitle', translations[lang].slide2Subtitle);
+            setText('slide2-desc', translations[lang].slide2Desc);
+            setText('slide2-btn', translations[lang].slide2Btn);
+            setText('slide3-title', translations[lang].slide3Title);
+            setText('slide3-subtitle', translations[lang].slide3Subtitle);
+            setText('slide3-desc', translations[lang].slide3Desc);
+            setText('slide3-btn', translations[lang].slide3Btn);
             // Section 2
-            document.getElementById('section2-title1').textContent = translations[lang].section2Title1;
-            document.getElementById('section2-title2').textContent = translations[lang].section2Title2;
-            document.getElementById('section2-desc').textContent = translations[lang].section2Desc;
-            document.getElementById('section2-card1-desc').textContent = translations[lang].section2Card1Desc;
-            document.getElementById('section2-card2-desc').textContent = translations[lang].section2Card2Desc;
-            document.getElementById('section2-card3-desc').textContent = translations[lang].section2Card3Desc;
-            document.getElementById('section2-btn').textContent = translations[lang].section2Btn;
+            setText('section2-title1', translations[lang].section2Title1);
+            setText('section2-title2', translations[lang].section2Title2);
+            setText('section2-desc', translations[lang].section2Desc);
+            setText('section2-card1-desc', translations[lang].section2Card1Desc);
+            setText('section2-card2-desc', translations[lang].section2Card2Desc);
+            setText('section2-card3-desc', translations[lang].section2Card3Desc);
+            setText('section2-btn', translations[lang].section2Btn);
             // Footer
-            document.getElementById('footer-about-title').textContent = translations[lang].footerAboutTitle;
-            document.getElementById('footer-about-text').textContent = translations[lang].footerAboutText;
-            document.getElementById('footer-links-title').textContent = translations[lang].footerLinksTitle;
-            document.getElementById('footer-home').textContent = translations[lang].footerHome;
-            document.getElementById('footer-lab').textContent = translations[lang].footerLab;
-            document.getElementById('footer-about').textContent = translations[lang].footerAbout;
-            document.getElementById('footer-contact-title').textContent = translations[lang].footerContactTitle;
-            document.getElementById('footer-phone-label').textContent = translations[lang].footerPhoneLabel;
-            document.getElementById('footer-address-label').textContent = translations[lang].footerAddressLabel;
-            document.getElementById('footer-location-title').textContent = translations[lang].footerLocationTitle;
-            document.getElementById('footer-copyright').textContent = translations[lang].footerCopyright;
+            setText('footer-about-title', translations[lang].footerAboutTitle);
+            setText('footer-about-text', translations[lang].footerAboutText);
+            setText('footer-links-title', translations[lang].footerLinksTitle);
+            setText('footer-home', translations[lang].footerHome);
+            setText('footer-lab', translations[lang].footerLab);
+            setText('footer-about', translations[lang].footerAbout);
+            setText('footer-contact-title', translations[lang].footerContactTitle);
+            setText('footer-phone-label', translations[lang].footerPhoneLabel);
+            setText('footer-address-label', translations[lang].footerAddressLabel);
+            setText('footer-location-title', translations[lang].footerLocationTitle);
+            setText('footer-copyright', translations[lang].footerCopyright);
             // Update button text
             // Update button flag
             document.getElementById('lang-switch-flag').innerHTML = getFlagSVG(lang);
